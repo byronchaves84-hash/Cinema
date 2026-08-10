@@ -1788,3 +1788,107 @@ footer {
 footer {
     position: relative;
 }
+
+
+
+
+
+
+/* =========================================================
+   BOTONES MÁS COMPACTOS EN MÓVIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Botones principales del HERO */
+    .hero-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+
+        padding: 10px 14px;
+
+        font-size: 14px;
+
+        border-radius: 5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* Botones Me gusta / No me gusta */
+    .like-dislike-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .reaction-button {
+        width: auto;
+        flex: 1 1 0;
+
+        padding: 9px 10px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+
+    /* Botones Anterior / Iniciar / Siguiente */
+    .controls-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0;
+    }
+
+    .episode-button {
+        width: auto;
+
+        flex: 1 1 0;
+
+        justify-content: center;
+
+        padding: 11px 12px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+    .episode-button .button-icon {
+        font-size: 15px;
+    }
+
+
+    /* Botones inferiores */
+    .series-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .action-button {
+        width: auto;
+
+        flex: 1 1 0;
+
+        text-align: center;
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+}
