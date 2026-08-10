@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    RESET
 ========================================================= */
@@ -8,103 +9,115 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #050505;
+
     color: #ffffff;
+
     min-height: 100vh;
+
     overflow-x: hidden;
 }
 
-/* Evita que imágenes, videos y elementos grandes
-   provoquen desplazamiento horizontal */
-img,
-video,
-iframe {
-    max-width: 100%;
-}
 
 
 /* =========================================================
-   TRAILER / VIDEO DE FONDO
+   TRAILER
 ========================================================= */
 
 .video-trailer {
     position: fixed;
+
     inset: 0;
+
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background: #050505;
+
     z-index: 0;
-    pointer-events: none;
+
+    overflow: hidden;
+
+    background: #050505;
 }
+
 
 .video-trailer video {
     position: absolute;
-    top: 0;
-    left: 0;
+
+    inset: 0;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-    object-position: center;
 
     display: block;
+
     z-index: 0;
 }
 
+
 .trailer-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.95),
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.20)
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.50),
+            rgba(0,0,0,.20)
         );
 
     z-index: 1;
-    pointer-events: none;
 }
+
 
 .trailer-vignette {
     position: absolute;
+
     inset: 0;
 
     background:
         radial-gradient(
             ellipse at center,
             transparent 20%,
-            rgba(0, 0, 0, 0.85) 100%
+            rgba(0,0,0,.85) 100%
         );
 
     z-index: 2;
+
     pointer-events: none;
 }
 
 
+
 /* =========================================================
-   FONDO DEL VIDEO DEL EPISODIO
+   FONDO VIDEO EPISODIO
 ========================================================= */
 
 .video-background {
     position: fixed;
+
     inset: 0;
 
-    width: 100%;
-    height: 100vh;
-
     z-index: -9;
+
     display: none;
 }
+
 
 .video-background video {
     width: 100%;
@@ -113,12 +126,16 @@ iframe {
     object-fit: cover;
 }
 
+
 .background-overlay {
     position: absolute;
+
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.65);
+    background:
+        rgba(0,0,0,.65);
 }
+
 
 
 /* =========================================================
@@ -129,10 +146,12 @@ iframe {
     position: relative;
 
     width: 100%;
+
     min-height: 100vh;
 
     z-index: 1;
 }
+
 
 
 /* =========================================================
@@ -145,45 +164,45 @@ iframe {
     min-height: 850px;
 
     display: flex;
+
     align-items: center;
 
-    padding: 100px 8% 180px;
-
-    overflow: hidden;
+    padding:
+        100px
+        8%
+        180px;
 }
+
 
 .hero-red-line {
     position: absolute;
 
     left: 4%;
+
     top: 25%;
 
     width: 4px;
+
     height: 250px;
 
     background: #e50914;
 
     box-shadow:
-        0 0 25px rgba(229, 9, 20, 0.6);
-
-    z-index: 2;
+        0 0 25px
+        rgba(229,9,20,.6);
 }
+
 
 .hero-content {
-    position: relative;
+    width: 100%;
 
     max-width: 750px;
-
-    z-index: 3;
 }
 
-
-/* =========================================================
-   MARCA
-========================================================= */
 
 .serie-brand {
     display: flex;
+
     align-items: center;
 
     gap: 12px;
@@ -191,21 +210,23 @@ iframe {
     margin-bottom: 30px;
 }
 
+
 .brand-mark {
     width: 42px;
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     background: #e50914;
 
     font-size: 25px;
-    font-weight: 900;
 
-    flex-shrink: 0;
+    font-weight: 900;
 }
+
 
 .brand-name {
     font-weight: 900;
@@ -216,30 +237,29 @@ iframe {
 }
 
 
-/* =========================================================
-   SERIE ORIGINAL
-========================================================= */
-
 .original-label {
     display: flex;
+
     align-items: center;
 
     gap: 10px;
 
     font-size: 12px;
+
     letter-spacing: 4px;
 
     color: #aaa;
 }
 
+
 .original-line {
     width: 35px;
+
     height: 2px;
 
     background: #e50914;
-
-    flex-shrink: 0;
 }
+
 
 
 /* =========================================================
@@ -248,25 +268,36 @@ iframe {
 
 .serie-title {
     display: flex;
+
     flex-direction: column;
 
-    margin: 20px 0;
+    margin:
+        20px
+        0;
 
-    font-size: clamp(60px, 9vw, 125px);
+    font-size:
+        clamp(
+            60px,
+            9vw,
+            125px
+        );
 
-    line-height: 0.85;
+    line-height: .85;
 
     font-weight: 900;
 
     letter-spacing: -5px;
 
     text-shadow:
-        5px 5px 20px rgba(0, 0, 0, 0.8);
+        5px 5px 20px
+        rgba(0,0,0,.8);
 }
+
 
 .serie-title span:last-child {
     color: #e50914;
 }
+
 
 
 /* =========================================================
@@ -275,7 +306,9 @@ iframe {
 
 .serie-meta {
     display: flex;
+
     flex-wrap: wrap;
+
     align-items: center;
 
     gap: 12px;
@@ -285,18 +318,25 @@ iframe {
     margin-bottom: 25px;
 }
 
-.quality {
-    border: 1px solid rgba(255, 255, 255, 0.5);
 
-    padding: 4px 7px;
+.quality {
+    border:
+        1px solid
+        rgba(255,255,255,.5);
+
+    padding:
+        4px 7px;
 
     font-size: 12px;
+
     font-weight: bold;
 }
+
 
 .dot {
     color: #777;
 }
+
 
 
 /* =========================================================
@@ -307,6 +347,7 @@ iframe {
     max-width: 650px;
 }
 
+
 .serie-description p {
     color: #d1d1d1;
 
@@ -316,18 +357,21 @@ iframe {
 }
 
 
+
 /* =========================================================
    ACCIONES HERO
 ========================================================= */
 
 .hero-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
 
     margin-top: 30px;
 }
+
 
 .hero-actions button,
 .hero-actions a {
@@ -338,41 +382,55 @@ iframe {
     cursor: pointer;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
 
-    padding: 14px 24px;
+    padding:
+        14px
+        24px;
 
     border-radius: 5px;
 
     font-size: 16px;
+
     font-weight: bold;
 
     transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+        .2s ease;
 }
+
 
 .hero-play-button {
     background: #ffffff;
+
     color: #000000;
 }
 
+
 .hero-play-button:hover {
     background: #dddddd;
+
     transform: scale(1.03);
 }
 
+
 .hero-info-button {
-    background: rgba(70, 70, 70, 0.85);
+    background:
+        rgba(70,70,70,.85);
+
     color: white;
 }
 
+
 .hero-info-button:hover {
-    background: rgba(100, 100, 100, 0.9);
+    background:
+        rgba(100,100,100,.9);
 }
+
 
 
 /* =========================================================
@@ -383,6 +441,7 @@ iframe {
     margin-top: 30px;
 }
 
+
 .reaction-question {
     display: block;
 
@@ -391,36 +450,45 @@ iframe {
     margin-bottom: 10px;
 }
 
+
 .like-dislike-buttons {
     display: flex;
 
     gap: 10px;
 }
 
-.reaction-button {
-    background: rgba(20, 20, 20, 0.8);
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.reaction-button {
+    background:
+        rgba(20,20,20,.8);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
 
     color: white;
 
-    padding: 10px 15px;
+    padding:
+        10px
+        15px;
 
     border-radius: 5px;
 
     cursor: pointer;
 
     transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+        .2s ease;
 }
+
 
 .reaction-button:hover,
 .reaction-button.selected {
     border-color: #e50914;
 
-    background: rgba(229, 9, 20, 0.2);
+    background:
+        rgba(229,9,20,.2);
 }
+
 
 
 /* =========================================================
@@ -431,9 +499,11 @@ iframe {
     position: absolute;
 
     bottom: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 250px;
 
     background:
@@ -443,9 +513,8 @@ iframe {
         );
 
     pointer-events: none;
-
-    z-index: 2;
 }
+
 
 
 /* =========================================================
@@ -455,25 +524,27 @@ iframe {
 .episode-section {
     position: relative;
 
-    padding: 80px 8%;
+    padding:
+        80px 8%;
 
     background:
         linear-gradient(
-            rgba(5, 5, 5, 0.96),
+            #050505,
             #080808
         );
-
-    z-index: 2;
 }
+
 
 .section-heading {
     display: flex;
 
     justify-content: space-between;
+
     align-items: flex-end;
 
     margin-bottom: 35px;
 }
+
 
 .section-kicker,
 .explorer-kicker,
@@ -489,6 +560,7 @@ iframe {
     font-weight: bold;
 }
 
+
 .section-title-row {
     display: flex;
 
@@ -497,28 +569,32 @@ iframe {
     gap: 20px;
 }
 
+
 .section-title-row h2 {
     font-size: 38px;
 
     margin-top: 8px;
 }
 
+
 .heading-red-line {
     width: 80px;
+
     height: 3px;
 
     background: #e50914;
 }
 
+
 .current-episode-badge {
     background: #e50914;
 
-    padding: 9px 15px;
+    padding:
+        9px 15px;
 
     font-weight: bold;
-
-    white-space: nowrap;
 }
+
 
 
 /* =========================================================
@@ -526,9 +602,12 @@ iframe {
 ========================================================= */
 
 .episode-explorer {
-    background: rgba(255, 255, 255, 0.04);
+    background:
+        rgba(255,255,255,.04);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid
+        rgba(255,255,255,.08);
 
     border-radius: 10px;
 
@@ -537,12 +616,15 @@ iframe {
     margin-bottom: 25px;
 }
 
+
 .explorer-header {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 }
+
 
 .explorer-header h3 {
     font-size: 25px;
@@ -550,10 +632,12 @@ iframe {
     margin-top: 5px;
 }
 
+
 .explorer-toggle {
     border: none;
 
-    background: rgba(255, 255, 255, 0.08);
+    background:
+        rgba(255,255,255,.08);
 
     color: white;
 
@@ -563,23 +647,28 @@ iframe {
     border-radius: 50%;
 
     cursor: pointer;
-
-    flex-shrink: 0;
 }
+
 
 .episode-selectors {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
 
     gap: 20px;
 
     margin-top: 25px;
 }
 
+
 .episode-selectors.collapsed {
     display: none;
 }
+
 
 .selector-box label {
     display: block;
@@ -593,9 +682,11 @@ iframe {
     margin-bottom: 8px;
 }
 
+
 .select-wrapper {
     position: relative;
 }
+
 
 .select-wrapper select {
     width: 100%;
@@ -604,11 +695,14 @@ iframe {
 
     background: #151515;
 
-    border: 1px solid #333;
+    border:
+        1px solid
+        #333;
 
     color: white;
 
-    padding: 14px;
+    padding:
+        14px;
 
     border-radius: 5px;
 
@@ -619,20 +713,25 @@ iframe {
     outline: none;
 }
 
+
 .select-wrapper select:focus {
     border-color: #e50914;
 }
+
 
 .select-arrow {
     position: absolute;
 
     right: 15px;
+
     top: 50%;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
     pointer-events: none;
 }
+
 
 
 /* =========================================================
@@ -643,19 +742,22 @@ iframe {
     display: flex;
 
     justify-content: center;
-    align-items: center;
 
     flex-wrap: wrap;
 
     gap: 10px;
 
-    margin: 30px 0;
+    margin:
+        30px 0;
 }
+
 
 .episode-button {
     border: none;
 
-    padding: 14px 22px;
+    padding:
+        14px
+        22px;
 
     border-radius: 5px;
 
@@ -668,48 +770,52 @@ iframe {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
 
     transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-
-    min-height: 46px;
+        .2s ease;
 }
 
-.episode-button:hover {
-    transform: translateY(-1px);
-}
 
 .episode-button.primary {
     background: #e50914;
 }
 
+
 .episode-button.primary:hover {
     background: #b20710;
 }
 
+
 .episode-button.secondary {
-    background: #242424;
+    background:
+        #242424;
 }
 
+
 .episode-button.secondary:hover {
-    background: #333;
+    background:
+        #333;
 }
+
 
 
 /* =========================================================
-   VIDEO DE EPISODIOS
+   REPRODUCTOR
+   IMPORTANTE: UNA SOLA VERSION
 ========================================================= */
 
 .player-section {
     width: 100%;
+
     max-width: 1000px;
 
     margin: 0 auto;
 }
+
 
 .video-container {
     position: relative;
@@ -718,42 +824,89 @@ iframe {
 
     aspect-ratio: 16 / 9;
 
-    background: #000;
+    height: auto;
 
-    border-radius: 10px;
+    min-height: 0;
+
+    background: #000;
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.6);
+        0 20px 60px
+        rgba(0,0,0,.6);
 }
 
+
+
+/* =========================================================
+   VIDEO HTML5
+========================================================= */
+
 .video-container video {
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    max-width: none;
+    max-height: none;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
 
     background: #000;
 
-    display: none;
+    object-fit: contain;
 }
 
-.video-container video.active {
-    display: block;
-}
+
+
+/* =========================================================
+   IFRAME
+========================================================= */
 
 .video-container iframe {
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
 
-    border: none;
+    max-width: none;
+    max-height: none;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
 }
 
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
 .player-placeholder {
-    position: relative;
+    position: absolute;
+
+    inset: 0;
 
     width: 100%;
     height: 100%;
@@ -763,33 +916,27 @@ iframe {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
+
+    padding: 20px;
 
     color: #888;
 
     text-align: center;
 
-    padding: 20px;
+    background: #000;
+
+    z-index: 2;
 }
 
-.placeholder-glow {
-    position: absolute;
 
-    width: 180px;
-    height: 180px;
-
-    border-radius: 50%;
-
-    background: rgba(229, 9, 20, 0.08);
-
-    filter: blur(30px);
-
-    pointer-events: none;
+.video-container.playing .player-placeholder {
+    display: none;
 }
+
 
 .placeholder-icon {
-    position: relative;
-
     width: 70px;
     height: 70px;
 
@@ -798,6 +945,7 @@ iframe {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: #e50914;
@@ -809,9 +957,8 @@ iframe {
     margin-bottom: 15px;
 }
 
-.placeholder-label {
-    position: relative;
 
+.placeholder-label {
     font-size: 11px;
 
     letter-spacing: 4px;
@@ -819,21 +966,21 @@ iframe {
     color: #e50914;
 }
 
-.player-placeholder h3 {
-    position: relative;
 
+.player-placeholder h3 {
     color: white;
 
-    margin: 10px 0;
+    margin:
+        10px 0;
 }
+
 
 .player-placeholder p {
-    position: relative;
-
     color: #777;
 
-    max-width: 400px;
+    margin: 0;
 }
+
 
 
 /* =========================================================
@@ -844,16 +991,18 @@ iframe {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
+
+    width: 100%;
 
     margin-top: 12px;
 
     color: #888;
 
     font-size: 13px;
-
-    gap: 15px;
 }
+
 
 .player-status {
     display: flex;
@@ -861,31 +1010,30 @@ iframe {
     align-items: center;
 
     gap: 8px;
-
-    min-width: 0;
 }
+
 
 .status-dot,
 .footer-status-dot {
     width: 8px;
     height: 8px;
 
+    flex-shrink: 0;
+
     border-radius: 50%;
 
     background: #22c55e;
 
     display: inline-block;
-
-    flex-shrink: 0;
 }
+
 
 .player-current {
     color: #e50914;
 
     font-weight: bold;
-
-    white-space: nowrap;
 }
+
 
 
 /* =========================================================
@@ -904,32 +1052,36 @@ iframe {
     margin-top: 30px;
 }
 
-.action-button {
-    border: 1px solid rgba(255, 255, 255, 0.15);
 
-    background: #151515;
+.action-button {
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background:
+        #151515;
 
     color: white;
 
     text-decoration: none;
 
-    padding: 12px 20px;
+    padding:
+        12px 20px;
 
     border-radius: 5px;
 
     cursor: pointer;
 
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
+    transition:
+        .2s ease;
 }
+
 
 .action-button:hover {
-    background: #242424;
+    background:
+        #242424;
 }
+
 
 
 /* =========================================================
@@ -939,18 +1091,21 @@ iframe {
 .bottom-info {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
 
     gap: 20px;
 
-    padding: 30px 8% 70px;
+    padding:
+        30px 8%
+        70px;
 
     background: #050505;
-
-    position: relative;
-
-    z-index: 2;
 }
+
 
 .info-card {
     display: flex;
@@ -961,14 +1116,16 @@ iframe {
 
     padding: 20px;
 
-    background: rgba(255, 255, 255, 0.035);
+    background:
+        rgba(255,255,255,.035);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid
+        rgba(255,255,255,.08);
 
     border-radius: 8px;
-
-    min-width: 0;
 }
+
 
 .info-card-icon {
     min-width: 45px;
@@ -979,16 +1136,19 @@ iframe {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 5px;
 
-    background: #e50914;
+    background:
+        #e50914;
 
     font-size: 12px;
 
     font-weight: bold;
 }
+
 
 .info-card-content {
     display: flex;
@@ -996,15 +1156,13 @@ iframe {
     flex-direction: column;
 
     gap: 5px;
-
-    min-width: 0;
 }
+
 
 .info-card-content strong {
     color: #eee;
-
-    overflow-wrap: anywhere;
 }
+
 
 
 /* =========================================================
@@ -1018,9 +1176,11 @@ iframe {
 
     top: 50%;
 
-    transform: rotate(90deg);
+    transform:
+        rotate(90deg);
 
-    color: rgba(255, 255, 255, 0.2);
+    color:
+        rgba(255,255,255,.2);
 
     font-size: 10px;
 
@@ -1032,6 +1192,7 @@ iframe {
 }
 
 
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1039,22 +1200,22 @@ iframe {
 footer {
     background: #020202;
 
-    padding: 50px 8% 25px;
-
-    position: relative;
-
-    z-index: 2;
+    padding:
+        50px 8% 25px;
 }
+
 
 .footer-inner {
     display: grid;
 
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns:
+        2fr 1fr 1fr;
 
     gap: 40px;
 
     align-items: start;
 }
+
 
 .footer-logo {
     display: flex;
@@ -1064,6 +1225,7 @@ footer {
     gap: 10px;
 }
 
+
 .footer-logo-mark {
     width: 35px;
     height: 35px;
@@ -1071,20 +1233,21 @@ footer {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: #e50914;
 
     font-weight: bold;
-
-    flex-shrink: 0;
 }
+
 
 .footer-logo-text {
     letter-spacing: 3px;
 
     font-weight: bold;
 }
+
 
 .footer-description {
     color: #666;
@@ -1094,6 +1257,7 @@ footer {
     line-height: 1.6;
 }
 
+
 .footer-links {
     display: flex;
 
@@ -1102,17 +1266,21 @@ footer {
     gap: 12px;
 }
 
+
 .footer-link {
     color: #999;
 
     text-decoration: none;
 
-    transition: color 0.2s ease;
+    transition:
+        .2s ease;
 }
+
 
 .footer-link:hover {
     color: white;
 }
+
 
 .footer-status {
     display: flex;
@@ -1124,20 +1292,22 @@ footer {
     color: #888;
 }
 
+
 .footer-divider {
     height: 1px;
 
-    background: #222;
+    background:
+        #222;
 
-    margin: 40px 0 20px;
+    margin:
+        40px 0 20px;
 }
+
 
 .footer-bottom {
     display: flex;
 
     justify-content: space-between;
-
-    gap: 15px;
 
     color: #555;
 
@@ -1145,262 +1315,226 @@ footer {
 }
 
 
+
 /* =========================================================
-   TABLET
+   TABLETS / MOVILES
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    .hero-section {
-        min-height: 750px;
 
-        padding:
-            80px 25px
-            130px;
-    }
-
-    .hero-red-line {
-        left: 12px;
-
-        height: 180px;
-    }
-
-    .hero-content {
-        width: 100%;
-    }
-
-    .serie-title {
-        font-size: 65px;
-    }
-
-    .serie-description p {
-        font-size: 16px;
-    }
-
-    .episode-section {
-        padding:
-            60px 20px;
-    }
-
-    .episode-selectors {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-
-        gap: 20px;
-    }
-
-    .section-title-row h2 {
-        font-size: 30px;
-    }
-
-    .bottom-info {
-        grid-template-columns: 1fr;
-
-        padding:
-            30px 20px;
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-}
-
-
-/* =========================================================
-   MOVIL
-========================================================= */
-
-@media (max-width: 480px) {
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero-section {
         min-height: 700px;
 
         padding:
-            70px 18px
-            100px;
+            70px
+            25px
+            120px;
+
+        align-items: center;
     }
 
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
     .hero-red-line {
-        left: 7px;
+        left: 10px;
+
+        top: 25%;
 
         width: 3px;
+
         height: 150px;
     }
 
+
+
+    /* =====================================================
+       MARCA
+    ===================================================== */
+
     .serie-brand {
-        gap: 8px;
-
-        margin-bottom: 22px;
-    }
-
-    .brand-mark {
-        width: 34px;
-        height: 34px;
-
-        font-size: 20px;
-    }
-
-    .brand-name {
-        font-size: 14px;
-
-        letter-spacing: 2px;
-    }
-
-    .original-label {
-        font-size: 9px;
-
-        letter-spacing: 2px;
-    }
-
-    .original-line {
-        width: 25px;
-    }
-
-
-    /* TITULO */
-
-    .serie-title {
-        font-size: 52px;
-
-        letter-spacing: -3px;
-
-        margin: 18px 0;
-    }
-
-
-    /* META */
-
-    .serie-meta {
-        font-size: 13px;
-
-        gap: 7px;
+        gap: 9px;
 
         margin-bottom: 20px;
     }
 
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+
+    .brand-name {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .original-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+
+    /* =====================================================
+       TITULO
+    ===================================================== */
+
+    .serie-title {
+        font-size:
+            clamp(
+                48px,
+                15vw,
+                70px
+            );
+
+        line-height: .88;
+
+        letter-spacing: -3px;
+
+        margin:
+            15px
+            0
+            18px;
+    }
+
+
+
+    /* =====================================================
+       META
+    ===================================================== */
+
+    .serie-meta {
+        gap: 7px;
+
+        margin-bottom: 18px;
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
     .quality {
-        padding: 3px 6px;
+        padding:
+            3px
+            6px;
 
         font-size: 10px;
     }
 
 
-    /* DESCRIPCION */
+
+    /* =====================================================
+       DESCRIPCION
+    ===================================================== */
+
+    .serie-description {
+        max-width: 100%;
+    }
+
 
     .serie-description p {
         font-size: 14px;
 
         line-height: 1.55;
+
+        color: #c5c5c5;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 3;
+
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
     }
 
 
+
     /* =====================================================
-       BOTONES HERO - COMPACTOS
+       BOTONES HERO
     ===================================================== */
 
     .hero-actions {
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
-
-        width: 100%;
+        grid-template-columns:
+            1fr
+            1fr;
 
         gap: 8px;
 
         margin-top: 20px;
     }
 
+
     .hero-actions button,
     .hero-actions a {
-        width: 100%;
+        justify-content: center;
 
-        min-width: 0;
+        padding:
+            12px
+            10px;
 
-        height: 42px;
+        font-size: 14px;
 
-        padding: 8px 10px;
-
-        font-size: 13px;
-
-        gap: 6px;
-
-        border-radius: 4px;
+        min-height: 44px;
     }
 
-    .hero-actions strong {
-        font-size: 13px;
-    }
-
-    .play-symbol,
-    .info-symbol {
-        font-size: 13px;
-    }
 
 
     /* =====================================================
-       REACCIONES COMPACTAS
+       REACCIONES
     ===================================================== */
 
     .reaction-area {
         margin-top: 20px;
     }
 
-    .reaction-question {
-        font-size: 13px;
 
-        margin-bottom: 8px;
+    .reaction-question {
+        font-size: 12px;
+
+        margin-bottom: 7px;
     }
+
 
     .like-dislike-buttons {
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr;
 
-        gap: 7px;
-
-        width: 100%;
+        gap: 8px;
     }
+
 
     .reaction-button {
-        width: 100%;
+        padding:
+            9px
+            8px;
 
-        min-width: 0;
-
-        height: 38px;
-
-        padding: 6px 7px;
-
-        font-size: 11px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 5px;
-    }
-
-    .reaction-icon {
         font-size: 12px;
     }
+
 
 
     /* =====================================================
@@ -1412,26 +1546,873 @@ footer {
     }
 
 
+
     /* =====================================================
        EPISODIOS
     ===================================================== */
 
     .episode-section {
         padding:
-            45px 14px;
+            45px
+            16px;
     }
+
+
+
+    /* =====================================================
+       CABECERA
+    ===================================================== */
 
     .section-heading {
         display: flex;
 
-        flex-direction: column;
+        justify-content: space-between;
 
-        align-items: flex-start;
+        align-items: center;
 
-        gap: 12px;
+        gap: 10px;
 
         margin-bottom: 20px;
     }
+
+
+    .section-kicker {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .section-title-row {
+        gap: 10px;
+    }
+
+
+    .section-title-row h2 {
+        font-size: 25px;
+
+        margin-top: 5px;
+    }
+
+
+    .heading-red-line {
+        width: 35px;
+
+        height: 2px;
+    }
+
+
+    .current-episode-badge {
+        padding:
+            7px
+            10px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 16px;
+
+        border-radius: 8px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .explorer-header h3 {
+        font-size: 19px;
+    }
+
+
+    .explorer-kicker {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .explorer-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .episode-selectors {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 16px;
+    }
+
+
+    .selector-box label {
+        font-size: 9px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .select-wrapper select {
+        padding: 11px;
+
+        font-size: 14px;
+    }
+
+
+
+    /* =====================================================
+       CONTROLES
+    ===================================================== */
+
+    .controls-container {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1.4fr
+            1fr;
+
+        gap: 6px;
+
+        margin:
+            20px
+            0;
+    }
+
+
+    .episode-button {
+        width: 100%;
+
+        justify-content: center;
+
+        padding:
+            11px
+            5px;
+
+        font-size: 12px;
+
+        gap: 5px;
+    }
+
+
+
+    /* =====================================================
+       REPRODUCTOR MOVIL
+    ===================================================== */
+
+    .player-section {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .video-container {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        aspect-ratio: 16 / 9;
+
+        border-radius: 7px;
+
+        overflow: hidden;
+    }
+
+
+    .video-container video,
+    .video-container iframe {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+        max-height: none;
+    }
+
+
+    .video-container video {
+        object-fit: contain;
+
+        background: #000;
+    }
+
+
+    .player-placeholder {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 15px;
+    }
+
+
+    .placeholder-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 20px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .placeholder-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .player-placeholder h3 {
+        font-size: 16px;
+
+        margin:
+            7px
+            0;
+    }
+
+
+    .player-placeholder p {
+        font-size: 12px;
+    }
+
+
+
+    /* =====================================================
+       ESTADO VIDEO
+    ===================================================== */
+
+    .player-status-row {
+        margin-top: 9px;
+
+        font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+
+    .action-button {
+        padding:
+            10px
+            8px;
+
+        font-size: 12px;
+
+        text-align: center;
+    }
+
+
+
+    /* =====================================================
+       INFORMACION
+    ===================================================== */
+
+    .bottom-info {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding:
+            20px
+            16px
+            40px;
+    }
+
+
+    .info-card {
+        padding: 13px;
+
+        gap: 12px;
+    }
+
+
+    .info-card-icon {
+        min-width: 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 10px;
+    }
+
+
+    .info-card-content {
+        gap: 3px;
+    }
+
+
+    .info-card-label {
+        font-size: 9px;
+    }
+
+
+    .info-card-content strong {
+        font-size: 13px;
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding:
+            35px
+            20px
+            20px;
+    }
+
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+
+    .footer-links {
+        gap: 9px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       LATERAL
+    ===================================================== */
+
+    .episodes-side-label {
+        display: none;
+    }
+
+}
+
+
+
+/* =========================================================
+   TELEFONOS PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-section {
+        min-height: 650px;
+
+        padding:
+            60px
+            18px
+            100px;
+    }
+
+
+    .serie-title {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+
+        margin:
+            12px
+            0
+            15px;
+    }
+
+
+    .serie-meta {
+        gap: 5px;
+
+        font-size: 11px;
+    }
+
+
+    .serie-description p {
+        font-size: 13px;
+
+        -webkit-line-clamp: 2;
+    }
+
+
+
+    /* =====================================================
+       BOTONES
+    ===================================================== */
+
+    .hero-actions {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        margin-top: 17px;
+    }
+
+
+    .hero-actions button,
+    .hero-actions a {
+        font-size: 13px;
+
+        padding:
+            10px
+            6px;
+    }
+
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .reaction-button {
+        font-size: 11px;
+
+        padding:
+            8px
+            5px;
+    }
+
+
+
+    /* =====================================================
+       EPISODIOS
+    ===================================================== */
+
+    .episode-section {
+        padding:
+            35px
+            12px;
+    }
+
+
+    .section-title-row h2 {
+        font-size: 22px;
+    }
+
+
+    .current-episode-badge {
+        font-size: 10px;
+
+        padding:
+            6px
+            8px;
+    }
+
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 13px;
+    }
+
+
+    .explorer-header h3 {
+        font-size: 17px;
+    }
+
+
+
+    /* =====================================================
+       CONTROLES
+    ===================================================== */
+
+    .controls-container {
+        grid-template-columns:
+            .9fr
+            1.3fr
+            .9fr;
+
+        gap: 5px;
+    }
+
+
+    .episode-button {
+        font-size: 10px;
+
+        padding:
+            10px
+            3px;
+    }
+
+
+
+    /* =====================================================
+       VIDEO
+    ===================================================== */
+
+    .video-container {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        border-radius: 6px;
+    }
+
+
+    .player-status-row {
+        font-size: 10px;
+    }
+
+
+
+    /* =====================================================
+       ACCIONES
+    ===================================================== */
+
+    .series-actions {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+
+
+    /* =====================================================
+       INFO
+    ===================================================== */
+
+    .bottom-info {
+        padding:
+            18px
+            12px
+            35px;
+    }
+
+}
+```
+
+
+
+```css
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 80px 25px 130px;
+        min-height: 750px;
+    }
+
+    .hero-red-line {
+        left: 12px;
+        height: 180px;
+    }
+
+    .serie-title {
+        font-size: 65px;
+    }
+
+    .serie-description p {
+        font-size: 16px;
+    }
+
+    .episode-section {
+        padding: 60px 20px;
+    }
+
+    .episode-selectors {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section-title-row h2 {
+        font-size: 30px;
+    }
+
+    .bottom-info {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* =====================================================
+       BOTONES EN CELULAR
+    ===================================================== */
+
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 7px;
+        white-space: nowrap;
+        min-height: 42px;
+    }
+
+    .hero-play-button {
+        flex: 0 0 auto;
+    }
+
+    .hero-info-button {
+        flex: 0 0 auto;
+    }
+
+
+    /* =====================================================
+       BOTONES DE EPISODIOS
+    ===================================================== */
+
+    .controls-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 7px;
+        margin: 20px 0;
+    }
+
+    .episode-button {
+        padding: 10px 12px;
+        font-size: 13px;
+        gap: 6px;
+        min-height: 40px;
+    }
+
+    .episode-button.secondary {
+        flex: 0 0 auto;
+    }
+
+    .episode-button.primary {
+        flex: 1;
+    }
+
+
+    /* =====================================================
+       BOTONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        padding: 9px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .reaction-button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding:
+            70px 18px
+            110px;
+    }
+
+    .serie-title {
+        font-size: 50px;
+        letter-spacing: -3px;
+    }
+
+    .serie-meta {
+        font-size: 12px;
+        gap: 7px;
+    }
+
+    .serie-description p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       HERO: BOTONES MÁS PEQUEÑOS
+    ===================================================== */
+
+    .hero-actions {
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 9px 11px;
+        font-size: 12px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .play-symbol,
+    .info-symbol {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       CONTROLES: ANTERIOR / INICIAR / SIGUIENTE
+    ===================================================== */
+
+    .controls-container {
+        gap: 5px;
+        margin: 18px 0;
+    }
+
+    .episode-button {
+        padding: 9px 9px;
+        font-size: 11px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .episode-button.primary {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .button-icon {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        gap: 6px;
+    }
+
+    .action-button {
+        padding: 8px 9px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        gap: 6px;
+    }
+
+    .reaction-button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 17px;
+    }
+
+    .explorer-header h3 {
+        font-size: 20px;
+    }
+
+    .episode-selectors {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       TITULOS
+    ===================================================== */
 
     .section-title-row {
         gap: 10px;
@@ -1443,240 +2424,11 @@ footer {
 
     .heading-red-line {
         width: 45px;
-        height: 2px;
     }
 
     .current-episode-badge {
-        padding: 7px 10px;
-
+        padding: 7px 9px;
         font-size: 11px;
-    }
-
-
-    /* =====================================================
-       EXPLORADOR
-    ===================================================== */
-
-    .episode-explorer {
-        padding: 16px;
-
-        margin-bottom: 18px;
-    }
-
-    .explorer-header h3 {
-        font-size: 19px;
-    }
-
-    .explorer-kicker {
-        font-size: 9px;
-    }
-
-    .explorer-toggle {
-        width: 34px;
-        height: 34px;
-    }
-
-    .episode-selectors {
-        gap: 12px;
-
-        margin-top: 16px;
-    }
-
-    .selector-box label {
-        font-size: 9px;
-
-        margin-bottom: 6px;
-    }
-
-    .select-wrapper select {
-        padding: 11px;
-
-        font-size: 13px;
-    }
-
-
-    /* =====================================================
-       CONTROLES DE EPISODIOS
-       NO OCUPAN TODO EL ALTO
-    ===================================================== */
-
-    .controls-container {
-        display: grid;
-
-        grid-template-columns:
-            1fr
-            1.4fr
-            1fr;
-
-        width: 100%;
-
-        gap: 6px;
-
-        margin: 18px 0;
-    }
-
-    .episode-button {
-        width: 100%;
-
-        min-width: 0;
-
-        min-height: 40px;
-
-        height: 40px;
-
-        padding: 6px 5px;
-
-        font-size: 11px;
-
-        gap: 4px;
-
-        border-radius: 4px;
-    }
-
-    .button-icon {
-        font-size: 14px;
-    }
-
-
-    /* =====================================================
-       VIDEO
-    ===================================================== */
-
-    .player-section {
-        width: 100%;
-    }
-
-    .video-container {
-        border-radius: 6px;
-
-        aspect-ratio: 16 / 9;
-    }
-
-    .placeholder-icon {
-        width: 48px;
-        height: 48px;
-
-        font-size: 17px;
-
-        margin-bottom: 8px;
-    }
-
-    .placeholder-label {
-        font-size: 8px;
-
-        letter-spacing: 2px;
-    }
-
-    .player-placeholder h3 {
-        font-size: 15px;
-
-        margin: 7px 0;
-    }
-
-    .player-placeholder p {
-        font-size: 11px;
-
-        max-width: 250px;
-    }
-
-    .placeholder-glow {
-        width: 120px;
-        height: 120px;
-    }
-
-
-    /* =====================================================
-       ESTADO VIDEO
-    ===================================================== */
-
-    .player-status-row {
-        margin-top: 8px;
-
-        font-size: 10px;
-
-        gap: 8px;
-    }
-
-    .player-current {
-        font-size: 10px;
-    }
-
-
-    /* =====================================================
-       ACCIONES INFERIORES
-    ===================================================== */
-
-    .series-actions {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 7px;
-
-        margin-top: 18px;
-    }
-
-    .action-button {
-        width: 100%;
-
-        min-width: 0;
-
-        height: 40px;
-
-        padding: 7px 5px;
-
-        font-size: 10px;
-
-        text-align: center;
-
-        gap: 5px;
-    }
-
-
-    /* =====================================================
-       INFORMACION
-    ===================================================== */
-
-    .bottom-info {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-
-        padding:
-            25px 14px
-            45px;
-    }
-
-    .info-card {
-        padding: 14px;
-
-        gap: 10px;
-    }
-
-    .info-card-icon {
-        min-width: 38px;
-
-        width: 38px;
-        height: 38px;
-    }
-
-    .info-card-content {
-        font-size: 13px;
-    }
-
-    .info-card-label {
-        font-size: 9px;
-    }
-
-
-    /* =====================================================
-       ETIQUETA LATERAL
-    ===================================================== */
-
-    .episodes-side-label {
-        display: none;
     }
 
 
@@ -1685,168 +2437,7 @@ footer {
     ===================================================== */
 
     footer {
-        padding:
-            35px 18px
-            20px;
-    }
-
-    .footer-inner {
-        gap: 25px;
-    }
-
-    .footer-logo-text {
-        font-size: 13px;
-
-        letter-spacing: 2px;
-    }
-
-    .footer-description {
-        font-size: 12px;
-    }
-
-    .footer-links {
-        gap: 9px;
-    }
-
-    .footer-link {
-        font-size: 13px;
-    }
-
-    .footer-status {
-        font-size: 12px;
-    }
-
-    .footer-divider {
-        margin:
-            25px 0
-            15px;
-    }
-
-    .footer-bottom {
-        font-size: 10px;
-
-        gap: 6px;
-    }
-
-
-    /* =====================================================
-       VIDEO MOVIL
-    ===================================================== */
-
-    .video-trailer video {
-        object-position: center center;
-    }
-
-}
-
-
-/* =========================================================
-   TELEFONOS MUY PEQUEÑOS
-========================================================= */
-
-@media (max-width: 360px) {
-
-    .hero-section {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .serie-title {
-        font-size: 45px;
-
-        letter-spacing: -2px;
-    }
-
-    .serie-meta {
-        font-size: 11px;
-
-        gap: 5px;
-    }
-
-    .hero-actions {
-        gap: 5px;
-    }
-
-    .hero-actions button,
-    .hero-actions a {
-        height: 38px;
-
-        padding:
-            6px 5px;
-
-        font-size: 11px;
-    }
-
-    .like-dislike-buttons {
-        gap: 5px;
-    }
-
-    .reaction-button {
-        height: 35px;
-
-        font-size: 10px;
-    }
-
-    .episode-section {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .controls-container {
-        gap: 4px;
-    }
-
-    .episode-button {
-        height: 37px;
-
-        font-size: 9px;
-    }
-
-    .series-actions {
-        gap: 5px;
-    }
-
-    .action-button {
-        font-size: 9px;
+        padding: 35px 18px 20px;
     }
 }
-
-
-/* =========================================================
-   SOPORTE DEL VIDEO HERO
-========================================================= */
-
-.hero-section #trailer {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    z-index: 0;
-}
-
-.hero-section .trailer-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-}
-
-.hero-section .trailer-vignette {
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 2;
-}
-
-.hero-section .hero-content {
-    position: relative;
-
-    z-index: 3;
-}
+```
