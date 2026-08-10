@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CinemaX</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            CINEMAX
+        </div>
+
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#peliculas">Películas</a>
+            <a href="#series">Series</a>
+            <a href="#terror">Terror</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="search-button" onclick="toggleSearch()">
+                🔍
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         BUSCADOR
+    ====================================================== -->
+
+    <div id="searchBox" class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar películas o series..."
+            onkeyup="searchMovies()"
+        >
+
+    </div>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                CINEMAX
+            </span>
+
+            <h1>
+                TU CINE,
+                <span>EN UN SOLO LUGAR</span>
+            </h1>
+
+            <p>
+                Disfruta de películas, series y terror
+                directamente desde CinemaX.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#peliculas" class="hero-button primary">
+                    ▶ Ver películas
+                </a>
+
+                <a href="#series" class="hero-button secondary">
+                    ＋ Explorar
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PELÍCULAS
+        ================================================== -->
+
+        <section
+            id="peliculas"
+            class="content-section movies-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        CATÁLOGO
+                    </span>
+
+                    <h2>
+                        Películas
+                    </h2>
+                </div>
+
+                <span class="section-count">
+                    17 títulos
+                </span>
+
+            </div>
+
+
+            <div class="movie-grid">
+
+
+                <div class="movie-card">
+                    <a href="enlace1/enlace1.html">
+                        <img src="images/anime1.jpg" alt="Película 1">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 1</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace2/enlace1.html">
+                        <img src="images/anime2.jpg" alt="Película 2">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 2</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace3/enlace1.html">
+                        <img src="images/anime3.jpg" alt="Película 3">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 3</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace4/enlace1.html">
+                        <img src="images/anime4.jpg" alt="Película 4">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 4</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace5/enlace1.html">
+                        <img src="images/anime5.jpg" alt="Película 5">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 5</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace6/enlace1.html">
+                        <img src="images/anime6.jpg" alt="Película 6">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 6</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace7/enlace1.html">
+                        <img src="images/anime7.jpeg" alt="Película 7">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 7</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace8/enlace1.html">
+                        <img src="images/anime8.jpg" alt="Película 8">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 8</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace9/enlace1.html">
+                        <img src="images/anime9.jpg" alt="Película 9">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 9</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace10/enlace1.html">
+                        <img src="images/anime10.jpg" alt="Película 10">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 10</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace11/enlace1.html">
+                        <img src="images/anime11.jpg" alt="Película 11">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 11</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace12/enlace1.html">
+                        <img src="images/anime12.jpg" alt="Película 12">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 12</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace13/enlace1.html">
+                        <img src="images/anime13.jpg" alt="Película 13">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 13</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace14/enlace1.html">
+                        <img src="images/anime14.jpg" alt="Película 14">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 14</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace15/enlace1.html">
+                        <img src="images/anime15.jpg" alt="Película 15">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 15</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace16/enlace1.html">
+                        <img src="images/anime16.jpg" alt="Película 16">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 16</h3>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="movie-card">
+                    <a href="enlace17/enlace1.html">
+                        <img src="images/anime17.jpg" alt="Película 17">
+                        <div class="card-info">
+                            <span>Película</span>
+                            <h3>Película 17</h3>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SERIES
+        ================================================== -->
+
+        <section
+            id="series"
+            class="content-section series-section"
+        >
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        COLECCIÓN
+                    </span>
+
+                    <h2>
+                        Series
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="carousel-wrapper">
+
+                <button
+                    class="carousel-btn prev-series"
+                    onclick="moveSeries(-1)"
+                >
+                    ❮
+                </button>
+
+
+                <div
+                    class="carousel-container"
+                    id="seriesCarousel"
+                >
+
+                    <div class="carousel-track">
+
+
+                        <div class="series-card">
+                            <a href="Serie1/index.html">
+                                <img src="images/serie1.jpg" alt="Serie 1">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 1</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie2/index.html">
+                                <img src="images/serie2.jpg" alt="Serie 2">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 2</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie3/index.html">
+                                <img src="images/serie3.jpg" alt="Serie 3">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 3</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie 4/index.html">
+                                <img src="images/serie4.jpg" alt="Serie 4">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 4</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie /index.html">
+                                <img src="images/serie5.jpg" alt="Serie 5">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 5</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie 6/index.html">
+                                <img src="images/serie6.jpg" alt="Serie 6">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 6</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie7/index.html">
+                                <img src="images/terror11.jpg" alt="Serie 7">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 7</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="Serie8/index.html">
+                                <img src="images/serie8.jpg" alt="Serie 8">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 8</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="series-card">
+                            <a href="serie9/index.html">
+                                <img src="images/terror12.jpg" alt="Serie 9">
+                                <div class="card-info">
+                                    <span>Serie</span>
+                                    <h3>Serie 9</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="carousel-btn next-series"
+                    onclick="moveSeries(1)"
+                >
+                    ❯
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TERROR
+        ================================================== -->
+
+        <section
+            id="terror"
+            class="content-section horror-section"
+        >
+
+            <div class="section-header horror-header">
+
+                <div>
+                    <span class="section-label">
+                        ZONA OSCURA
+                    </span>
+
+                    <h2>
+                        Terror
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="carousel-wrapper">
+
+                <button
+                    class="carousel-btn horror-btn prev-horror"
+                    onclick="moveHorror(-1)"
+                >
+                    ❮
+                </button>
+
+
+                <div
+                    class="carousel-container"
+                    id="horrorCarousel"
+                >
+
+                    <div class="carousel-track">
+
+
+                        <div class="horror-card">
+                            <a href="terror1/enlace1.html">
+                                <img src="images/terror1.jpg" alt="Terror 1">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 1</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror2/enlace1.html">
+                                <img src="images/terror2.jpg" alt="Terror 2">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 2</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror3/enlace1.html">
+                                <img src="images/terror3.jpg" alt="Terror 3">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 3</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror4/enlace1.html">
+                                <img src="images/terror6.jpg" alt="Terror 6">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 4</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror5/enlace1.html">
+                                <img src="images/terror7.jpg" alt="Terror 7">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 5</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror6/enlace1.html">
+                                <img src="images/terror8.jpg" alt="Terror 8">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 6</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror7/enlace1.html">
+                                <img src="images/terror9.jpg" alt="Terror 9">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 7</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror8/enlace1.html">
+                                <img src="images/terror10.jpg" alt="Terror 10">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 8</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="horror-card">
+                            <a href="terror9/enlace1.html">
+                                <img src="images/terror11.jpg" alt="Terror 11">
+                                <div class="card-info">
+                                    <span>Terror</span>
+                                    <h3>Terror 9</h3>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="carousel-btn horror-btn next-horror"
+                    onclick="moveHorror(1)"
+                >
+                    ❯
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            CINEMAX
+        </div>
+
+        <p>
+            © CinemaX 2025 — Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         INTEGRADO EN EL HTML
+    ====================================================== -->
+
+    <script>
+
+        /* =================================================
+           BUSCADOR
+        ================================================== */
+
+        function toggleSearch() {
+
+            const searchBox =
+                document.getElementById("searchBox");
+
+            searchBox.classList.toggle("active");
+
+            if (searchBox.classList.contains("active")) {
+
+                document
+                    .getElementById("searchInput")
+                    .focus();
+
+            }
+
+        }
+
+
+        function searchMovies() {
+
+            const input =
+                document
+                    .getElementById("searchInput")
+                    .value
+                    .toLowerCase()
+                    .trim();
+
+
+            const cards =
+                document.querySelectorAll(
+                    ".movie-card, .series-card, .horror-card"
+                );
+
+
+            cards.forEach(card => {
+
+                const title =
+                    card
+                        .querySelector("h3")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (
+                    input === "" ||
+                    title.includes(input)
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        /* =================================================
+           CARRUSEL SERIES
+        ================================================== */
+
+        let seriesPosition = 0;
+
+
+        function moveSeries(direction) {
+
+            const carousel =
+                document.getElementById(
+                    "seriesCarousel"
+                );
+
+            const track =
+                carousel.querySelector(
+                    ".carousel-track"
+                );
+
+
+            const cards =
+                track.querySelectorAll(
+                    ".series-card"
+                );
+
+
+            if (!cards.length) return;
+
+
+            const cardWidth =
+                cards[0].offsetWidth + 18;
+
+
+            const visibleCards =
+                Math.floor(
+                    carousel.offsetWidth /
+                    cardWidth
+                );
+
+
+            const maxPosition =
+                Math.max(
+                    0,
+                    cards.length - visibleCards
+                );
+
+
+            seriesPosition += direction;
+
+
+            if (seriesPosition < 0) {
+
+                seriesPosition = 0;
+
+            }
+
+
+            if (seriesPosition > maxPosition) {
+
+                seriesPosition = maxPosition;
+
+            }
+
+
+            track.style.transform =
+                `translateX(-${seriesPosition * cardWidth}px)`;
+
+        }
+
+
+
+        /* =================================================
+           CARRUSEL TERROR
+        ================================================== */
+
+        let horrorPosition = 0;
+
+
+        function moveHorror(direction) {
+
+            const carousel =
+                document.getElementById(
+                    "horrorCarousel"
+                );
+
+            const track =
+                carousel.querySelector(
+                    ".carousel-track"
+                );
+
+
+            const cards =
+                track.querySelectorAll(
+                    ".horror-card"
+                );
+
+
+            if (!cards.length) return;
+
+
+            const cardWidth =
+                cards[0].offsetWidth + 18;
+
+
+            const visibleCards =
+                Math.floor(
+                    carousel.offsetWidth /
+                    cardWidth
+                );
+
+
+            const maxPosition =
+                Math.max(
+                    0,
+                    cards.length - visibleCards
+                );
+
+
+            horrorPosition += direction;
+
+
+            if (horrorPosition < 0) {
+
+                horrorPosition = 0;
+
+            }
+
+
+            if (horrorPosition > maxPosition) {
+
+                horrorPosition = maxPosition;
+
+            }
+
+
+            track.style.transform =
+                `translateX(-${horrorPosition * cardWidth}px)`;
+
+        }
+
+
+
+        /* =================================================
+           REAJUSTAR CARRUSELES
+        ================================================== */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                seriesPosition = 0;
+                horrorPosition = 0;
+
+
+                const seriesTrack =
+                    document
+                        .querySelector(
+                            "#seriesCarousel .carousel-track"
+                        );
+
+
+                const horrorTrack =
+                    document
+                        .querySelector(
+                            "#horrorCarousel .carousel-track"
+                        );
+
+
+                if (seriesTrack) {
+
+                    seriesTrack.style.transform =
+                        "translateX(0)";
+
+                }
+
+
+                if (horrorTrack) {
+
+                    horrorTrack.style.transform =
+                        "translateX(0)";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+
