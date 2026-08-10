@@ -1401,5 +1401,244 @@ footer p {
 
     }
 
+
+   ```css
+/* =========================================================
+   MOVILES
+   MISMO DISEÑO DE PC + ADAPTADO A PANTALLAS PEQUEÑAS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
+    .navbar {
+        height: 70px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .search-box {
+        top: 70px;
+        right: 18px;
+        width: calc(100% - 36px);
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero-content {
+        width: 85%;
+        max-width: 700px;
+        margin-left: 7%;
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .hero p {
+        max-width: 500px;
+        margin: 20px 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-button {
+        min-width: 135px;
+        padding: 12px 18px;
+    }
+
+
+    /* =====================================================
+       SECCIONES
+       ===================================================== */
+
+    .content-section {
+        padding: 45px 18px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+    }
+
+
+    /* =====================================================
+       PELICULAS
+       2 COLUMNAS, MISMO ESTILO DE PC
+       ===================================================== */
+
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .movie-card,
+    .series-card,
+    .horror-card {
+        border-radius: 5px;
+    }
+
+    .movie-card img,
+    .series-card img,
+    .horror-card img {
+        aspect-ratio: 2 / 3;
+    }
+
+    .card-info {
+        padding: 40px 10px 10px;
+    }
+
+    .card-info span {
+        font-size: 0.62rem;
+    }
+
+    .card-info h3 {
+        font-size: 0.85rem;
+    }
+
+
+    /* =====================================================
+       HOVER / TOUCH
+       ===================================================== */
+
+    .movie-card:hover,
+    .series-card:hover,
+    .horror-card:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+
+    /* =====================================================
+       SERIES
+       ===================================================== */
+
+    .series-card {
+        flex: 0 0 185px;
+    }
+
+    .series-card .card-info {
+        padding-top: 50px;
+    }
+
+    .carousel-track {
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       TERROR
+       ===================================================== */
+
+    .horror-card {
+        flex: 0 0 190px;
+    }
+
+
+    /* =====================================================
+       BOTONES CARRUSEL
+       ===================================================== */
+
+    .carousel-btn {
+        width: 38px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .prev-series,
+    .prev-horror {
+        left: 0;
+    }
+
+    .next-series,
+    .next-horror {
+        right: 0;
+    }
+}
+
+
+/* =========================================================
+   TELEFONOS PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-content {
+        width: 88%;
+        margin-left: 6%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .hero-button {
+        min-width: 125px;
+        padding: 11px 15px;
+        font-size: 0.9rem;
+    }
+
+    .movie-grid {
+        gap: 9px;
+    }
+
+    .card-info {
+        padding: 32px 8px 8px;
+    }
+
+    .card-info h3 {
+        font-size: 0.78rem;
+    }
+
+    .series-card {
+        flex-basis: 165px;
+    }
+
+    .horror-card {
+        flex-basis: 170px;
+    }
+}
+```
+
+
 }
 
