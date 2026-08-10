@@ -1,5 +1,4 @@
 
-```css
 /* =========================================================
    CINEMAX
    REDISEÑO ESTILO NETFLIX
@@ -88,10 +87,6 @@ body {
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--red-dark);
-}
-
 
 /* =========================================================
    NAVBAR
@@ -114,7 +109,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     background:
@@ -179,8 +173,7 @@ body {
 
 .nav-links a:hover {
 
-    color:
-        var(--red);
+    color: var(--red);
 }
 
 
@@ -194,11 +187,6 @@ body {
 
     align-items: center;
 }
-
-
-/* =========================================================
-   BOTÓN BUSCAR
-========================================================= */
 
 .search-button {
 
@@ -234,8 +222,7 @@ body {
     background:
         rgba(255,255,255,0.16);
 
-    transform:
-        scale(1.08);
+    transform: scale(1.08);
 }
 
 
@@ -300,10 +287,6 @@ body {
     font-size: 0.95rem;
 }
 
-.search-box input::placeholder {
-    color: #888888;
-}
-
 
 /* =========================================================
    HERO
@@ -339,7 +322,7 @@ body {
 
 
 /* =========================================================
-   HERO DECORACIÓN
+   HERO DECORACION
 ========================================================= */
 
 .hero::before {
@@ -364,11 +347,6 @@ body {
 
     pointer-events: none;
 }
-
-
-/* =========================================================
-   HERO OVERLAY
-========================================================= */
 
 .hero-overlay {
 
@@ -413,11 +391,6 @@ body {
     padding-top: 70px;
 }
 
-
-/* =========================================================
-   HERO BADGE
-========================================================= */
-
 .hero-badge {
 
     display: inline-block;
@@ -431,8 +404,7 @@ body {
         1px solid
         rgba(229,9,20,0.6);
 
-    color:
-        var(--red);
+    color: var(--red);
 
     font-size: 0.75rem;
 
@@ -440,11 +412,6 @@ body {
 
     letter-spacing: 3px;
 }
-
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
 
 .hero h1 {
 
@@ -468,14 +435,8 @@ body {
 
     display: block;
 
-    color:
-        var(--red);
+    color: var(--red);
 }
-
-
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
 
 .hero p {
 
@@ -502,8 +463,6 @@ body {
     display: flex;
 
     gap: 12px;
-
-    flex-wrap: wrap;
 }
 
 .hero-button {
@@ -511,7 +470,6 @@ body {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     min-width: 150px;
@@ -588,14 +546,14 @@ main {
 
 
 /* =========================================================
-   HEADER DE SECCIÓN
+   HEADER DE SECCION
 ========================================================= */
 
 .section-header {
 
     display: flex;
 
-    align-items: flex-end;
+    align-items: end;
 
     justify-content: space-between;
 
@@ -637,7 +595,7 @@ main {
 
 
 /* =========================================================
-   PELÍCULAS GRID
+   PELICULAS GRID
 ========================================================= */
 
 .movie-grid {
@@ -703,7 +661,7 @@ main {
 
 
 /* =========================================================
-   INFORMACIÓN TARJETA
+   INFORMACION TARJETA
 ========================================================= */
 
 .card-info {
@@ -785,7 +743,8 @@ main {
 }
 
 .movie-card:hover .card-info h3,
-.series-card:hover .card-info h3 {
+.series-card:hover .card-info h3,
+.horror-card:hover .card-info h3 {
 
     color:
         #ffffff;
@@ -904,15 +863,13 @@ main {
 .prev-series,
 .prev-horror {
 
-    left:
-        -10px;
+    left: -10px;
 }
 
 .next-series,
 .next-horror {
 
-    right:
-        -10px;
+    right: -10px;
 }
 
 
@@ -990,14 +947,12 @@ main {
 
 footer {
 
-    margin-top:
-        50px;
+    margin-top: 50px;
 
     padding:
         45px 20px;
 
-    text-align:
-        center;
+    text-align: center;
 
     background:
         #030303;
@@ -1009,8 +964,7 @@ footer {
 
 .footer-logo {
 
-    margin-bottom:
-        12px;
+    margin-bottom: 12px;
 
     color:
         var(--red);
@@ -1027,8 +981,7 @@ footer {
 
 footer p {
 
-    margin:
-        0;
+    margin: 0;
 
     color:
         #666;
@@ -1062,20 +1015,18 @@ footer p {
 
     .hero-content {
 
-        width:
-            70%;
+        width: 70%;
     }
 
     .nav-links {
 
-        gap:
-            15px;
+        gap: 15px;
     }
 }
 
 
 /* =========================================================
-   MÓVILES
+   MOVILES
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -1087,8 +1038,7 @@ footer p {
 
     .navbar {
 
-        height:
-            70px;
+        height: 70px;
 
         padding:
             0 18px;
@@ -1102,17 +1052,14 @@ footer p {
 
     .nav-links {
 
-        display:
-            none;
+        display: none;
     }
 
     .search-box {
 
-        top:
-            70px;
+        top: 70px;
 
-        right:
-            18px;
+        right: 18px;
 
         width:
             calc(100% - 36px);
@@ -1220,7 +1167,7 @@ footer p {
 
 
     /* =====================================================
-       PELÍCULAS
+       PELICULAS
        3 COLUMNAS EN CELULAR
     ===================================================== */
 
@@ -1233,47 +1180,52 @@ footer p {
             10px;
     }
 
-    .movie-card {
-
-        min-width:
-            0;
+    .movie-card,
+    .series-card,
+    .horror-card {
 
         border-radius:
             5px;
     }
 
-    .movie-card img {
+    .movie-card img,
+    .series-card img,
+    .horror-card img {
 
         aspect-ratio:
             2 / 3;
     }
 
-
-    /* =====================================================
-       INFORMACIÓN DE PELÍCULAS EN MÓVIL
-    ===================================================== */
-
     .card-info {
 
         padding:
-            32px 8px 8px;
+            34px 8px 8px;
     }
 
     .card-info span {
 
         font-size:
-            0.58rem;
+            0.55rem;
     }
 
     .card-info h3 {
 
         font-size:
-            0.78rem;
+            0.72rem;
+
+        white-space:
+            nowrap;
+
+        overflow:
+            hidden;
+
+        text-overflow:
+            ellipsis;
     }
 
 
     /* =====================================================
-       HOVER / TOUCH
+       DESACTIVAR EFECTO HOVER PESADO EN TOUCH
     ===================================================== */
 
     .movie-card:hover,
@@ -1281,14 +1233,33 @@ footer p {
     .horror-card:hover {
 
         transform:
-            translateY(-5px)
-            scale(1.02);
+            none;
+
+        box-shadow:
+            none;
+    }
+
+    .movie-card:hover img,
+    .series-card:hover img,
+    .horror-card:hover img {
+
+        transform:
+            none;
+
+        filter:
+            none;
     }
 
 
     /* =====================================================
-       CARRUSELES TÁCTILES
+       CARRUSELES TACTILES
     ===================================================== */
+
+    .carousel-wrapper {
+
+        width:
+            100%;
+    }
 
     .carousel-container {
 
@@ -1315,6 +1286,9 @@ footer p {
 
         touch-action:
             pan-x;
+
+        overscroll-behavior-x:
+            contain;
     }
 
     .carousel-container::-webkit-scrollbar {
@@ -1331,7 +1305,8 @@ footer p {
 
 
     /* =====================================================
-       CARRIL
+       IMPORTANTE:
+       EN MOVIL EL JS DE LAS FLECHAS NO MUEVE EL TRACK
     ===================================================== */
 
     .carousel-track {
@@ -1339,11 +1314,11 @@ footer p {
         display:
             flex;
 
-        width:
-            max-content;
-
         gap:
             10px;
+
+        width:
+            max-content;
 
         transform:
             none !important;
@@ -1380,15 +1355,15 @@ footer p {
     .horror-card {
 
         flex:
-            0 0 180px;
+            0 0 185px;
 
         min-width:
-            180px;
+            185px;
     }
 
 
     /* =====================================================
-       OCULTAR FLECHAS EN MÓVIL
+       OCULTAR FLECHAS EN CELULAR
     ===================================================== */
 
     .carousel-btn {
@@ -1397,14 +1372,37 @@ footer p {
             none !important;
     }
 
+
+    /* =====================================================
+       EVITAR QUE LOS ENLACES INTERFIERAN CON EL SWIPE
+    ===================================================== */
+
+    .carousel-card a {
+
+        -webkit-tap-highlight-color:
+            transparent;
+    }
+
 }
 
 
 /* =========================================================
-   TELÉFONOS PEQUEÑOS
+   TELEFONOS PEQUEÑOS
 ========================================================= */
 
 @media (max-width: 380px) {
+
+    .navbar {
+
+        padding:
+            0 14px;
+    }
+
+    .logo {
+
+        font-size:
+            1.45rem;
+    }
 
     .hero {
 
@@ -1447,7 +1445,7 @@ footer p {
 
 
     /* =====================================================
-       3 PELÍCULAS
+       3 PELICULAS TAMBIEN EN TELEFONOS PEQUEÑOS
     ===================================================== */
 
     .movie-grid {
@@ -1462,19 +1460,19 @@ footer p {
     .card-info {
 
         padding:
-            28px 6px 7px;
+            30px 6px 7px;
     }
 
     .card-info span {
 
         font-size:
-            0.52rem;
+            0.48rem;
     }
 
     .card-info h3 {
 
         font-size:
-            0.70rem;
+            0.65rem;
     }
 
 
@@ -1530,4 +1528,4 @@ footer p {
             auto !important;
     }
 }
-```
+
