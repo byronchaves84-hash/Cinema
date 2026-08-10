@@ -1,5 +1,5 @@
 /* =========================================================
-RESET
+   RESET
 ========================================================= */
 
 * {
@@ -13,46 +13,39 @@ html {
 }
 
 body {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     background: #050505;
-
     color: #ffffff;
-
     min-height: 100vh;
-
     overflow-x: hidden;
 }
 
+/* Evita que imágenes, videos y elementos grandes
+   provoquen desplazamiento horizontal */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
 
 
 /* =========================================================
-TRAILER / VIDEO DE FONDO
+   TRAILER / VIDEO DE FONDO
 ========================================================= */
 
 .video-trailer {
     position: fixed;
-
     inset: 0;
-
     width: 100%;
     height: 100vh;
-
     overflow: hidden;
-
     background: #050505;
-
     z-index: 0;
-
     pointer-events: none;
 }
 
 .video-trailer video {
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -60,66 +53,61 @@ TRAILER / VIDEO DE FONDO
     height: 100%;
 
     object-fit: cover;
+    object-position: center;
 
     display: block;
-
     z-index: 0;
 }
 
 .trailer-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.95),
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.20)
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.20)
         );
 
     z-index: 1;
-
     pointer-events: none;
 }
 
 .trailer-vignette {
     position: absolute;
-
     inset: 0;
 
     background:
         radial-gradient(
             ellipse at center,
             transparent 20%,
-            rgba(0,0,0,.85) 100%
+            rgba(0, 0, 0, 0.85) 100%
         );
 
     z-index: 2;
-
     pointer-events: none;
 }
 
 
-
 /* =========================================================
-FONDO DEL VIDEO
+   FONDO DEL VIDEO DEL EPISODIO
 ========================================================= */
 
 .video-background {
     position: fixed;
-
     inset: 0;
 
-    z-index: -9;
+    width: 100%;
+    height: 100vh;
 
+    z-index: -9;
     display: none;
 }
 
 .video-background video {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -127,33 +115,28 @@ FONDO DEL VIDEO
 
 .background-overlay {
     position: absolute;
-
     inset: 0;
 
-    background:
-        rgba(0,0,0,.65);
+    background: rgba(0, 0, 0, 0.65);
 }
 
 
-
 /* =========================================================
-CONTENEDOR
+   CONTENEDOR
 ========================================================= */
 
 .serie-container {
     position: relative;
 
     width: 100%;
-
     min-height: 100vh;
 
     z-index: 1;
 }
 
 
-
 /* =========================================================
-HERO
+   HERO
 ========================================================= */
 
 .hero-section {
@@ -162,13 +145,9 @@ HERO
     min-height: 850px;
 
     display: flex;
-
     align-items: center;
 
-    padding:
-        100px
-        8%
-        180px;
+    padding: 100px 8% 180px;
 
     overflow: hidden;
 }
@@ -177,31 +156,34 @@ HERO
     position: absolute;
 
     left: 4%;
-
     top: 25%;
 
     width: 4px;
-
     height: 250px;
 
     background: #e50914;
 
     box-shadow:
-        0 0 25px
-        rgba(229,9,20,.6);
+        0 0 25px rgba(229, 9, 20, 0.6);
+
+    z-index: 2;
 }
 
 .hero-content {
-    max-width: 750px;
-
     position: relative;
+
+    max-width: 750px;
 
     z-index: 3;
 }
 
+
+/* =========================================================
+   MARCA
+========================================================= */
+
 .serie-brand {
     display: flex;
-
     align-items: center;
 
     gap: 12px;
@@ -211,20 +193,18 @@ HERO
 
 .brand-mark {
     width: 42px;
-
     height: 42px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     background: #e50914;
 
     font-size: 25px;
-
     font-weight: 900;
+
+    flex-shrink: 0;
 }
 
 .brand-name {
@@ -235,15 +215,18 @@ HERO
     font-size: 18px;
 }
 
+
+/* =========================================================
+   SERIE ORIGINAL
+========================================================= */
+
 .original-label {
     display: flex;
-
     align-items: center;
 
     gap: 10px;
 
     font-size: 12px;
-
     letter-spacing: 4px;
 
     color: #aaa;
@@ -251,43 +234,34 @@ HERO
 
 .original-line {
     width: 35px;
-
     height: 2px;
 
     background: #e50914;
+
+    flex-shrink: 0;
 }
 
 
-
 /* =========================================================
-TITULO
+   TITULO
 ========================================================= */
 
 .serie-title {
     display: flex;
-
     flex-direction: column;
 
-    margin:
-        20px
-        0;
+    margin: 20px 0;
 
-    font-size:
-        clamp(
-            60px,
-            9vw,
-            125px
-        );
+    font-size: clamp(60px, 9vw, 125px);
 
-    line-height: .85;
+    line-height: 0.85;
 
     font-weight: 900;
 
     letter-spacing: -5px;
 
     text-shadow:
-        5px 5px 20px
-        rgba(0,0,0,.8);
+        5px 5px 20px rgba(0, 0, 0, 0.8);
 }
 
 .serie-title span:last-child {
@@ -295,16 +269,13 @@ TITULO
 }
 
 
-
 /* =========================================================
-META
+   META
 ========================================================= */
 
 .serie-meta {
     display: flex;
-
     flex-wrap: wrap;
-
     align-items: center;
 
     gap: 12px;
@@ -315,15 +286,11 @@ META
 }
 
 .quality {
-    border:
-        1px solid
-        rgba(255,255,255,.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
-    padding:
-        4px 7px;
+    padding: 4px 7px;
 
     font-size: 12px;
-
     font-weight: bold;
 }
 
@@ -332,9 +299,8 @@ META
 }
 
 
-
 /* =========================================================
-DESCRIPCION
+   DESCRIPCION
 ========================================================= */
 
 .serie-description {
@@ -350,14 +316,12 @@ DESCRIPCION
 }
 
 
-
 /* =========================================================
-ACCIONES
+   ACCIONES HERO
 ========================================================= */
 
 .hero-actions {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 12px;
@@ -374,50 +338,45 @@ ACCIONES
     cursor: pointer;
 
     display: flex;
-
     align-items: center;
+    justify-content: center;
 
     gap: 10px;
 
-    padding:
-        14px
-        24px;
+    padding: 14px 24px;
 
     border-radius: 5px;
 
     font-size: 16px;
-
     font-weight: bold;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hero-play-button {
     background: #ffffff;
-
     color: #000000;
 }
 
 .hero-play-button:hover {
     background: #dddddd;
-
     transform: scale(1.03);
 }
 
 .hero-info-button {
-    background:
-        rgba(70,70,70,.85);
-
+    background: rgba(70, 70, 70, 0.85);
     color: white;
 }
 
 .hero-info-button:hover {
-    background:
-        rgba(100,100,100,.9);
+    background: rgba(100, 100, 100, 0.9);
 }
 
 
-
 /* =========================================================
-REACCIONES
+   REACCIONES
 ========================================================= */
 
 .reaction-area {
@@ -439,47 +398,42 @@ REACCIONES
 }
 
 .reaction-button {
-    background:
-        rgba(20,20,20,.8);
+    background: rgba(20, 20, 20, 0.8);
 
-    border:
-        1px solid
-        rgba(255,255,255,.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     color: white;
 
-    padding:
-        10px
-        15px;
+    padding: 10px 15px;
 
     border-radius: 5px;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .reaction-button:hover,
 .reaction-button.selected {
     border-color: #e50914;
 
-    background:
-        rgba(229,9,20,.2);
+    background: rgba(229, 9, 20, 0.2);
 }
 
 
-
 /* =========================================================
-FADE
+   FADE HERO
 ========================================================= */
 
 .hero-bottom-fade {
     position: absolute;
 
     bottom: 0;
-
     left: 0;
 
     width: 100%;
-
     height: 250px;
 
     background:
@@ -494,20 +448,18 @@ FADE
 }
 
 
-
 /* =========================================================
-EPISODIOS
+   EPISODIOS
 ========================================================= */
 
 .episode-section {
     position: relative;
 
-    padding:
-        80px 8%;
+    padding: 80px 8%;
 
     background:
         linear-gradient(
-            rgba(5,5,5,.96),
+            rgba(5, 5, 5, 0.96),
             #080808
         );
 
@@ -518,8 +470,7 @@ EPISODIOS
     display: flex;
 
     justify-content: space-between;
-
-    align-items: end;
+    align-items: flex-end;
 
     margin-bottom: 35px;
 }
@@ -554,7 +505,6 @@ EPISODIOS
 
 .heading-red-line {
     width: 80px;
-
     height: 3px;
 
     background: #e50914;
@@ -563,25 +513,22 @@ EPISODIOS
 .current-episode-badge {
     background: #e50914;
 
-    padding:
-        9px 15px;
+    padding: 9px 15px;
 
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 
-
 /* =========================================================
-EXPLORADOR
+   EXPLORADOR
 ========================================================= */
 
 .episode-explorer {
-    background:
-        rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, 0.04);
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 10px;
 
@@ -594,7 +541,6 @@ EXPLORADOR
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 }
 
@@ -607,28 +553,24 @@ EXPLORADOR
 .explorer-toggle {
     border: none;
 
-    background:
-        rgba(255,255,255,.08);
+    background: rgba(255, 255, 255, 0.08);
 
     color: white;
 
     width: 40px;
-
     height: 40px;
 
     border-radius: 50%;
 
     cursor: pointer;
+
+    flex-shrink: 0;
 }
 
 .episode-selectors {
     display: grid;
 
-    grid-template-columns:
-        repeat(
-            2,
-            1fr
-        );
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
 
@@ -662,60 +604,58 @@ EXPLORADOR
 
     background: #151515;
 
-    border:
-        1px solid
-        #333;
+    border: 1px solid #333;
 
     color: white;
 
-    padding:
-        14px;
+    padding: 14px;
 
     border-radius: 5px;
 
     font-size: 15px;
 
     cursor: pointer;
+
+    outline: none;
+}
+
+.select-wrapper select:focus {
+    border-color: #e50914;
 }
 
 .select-arrow {
     position: absolute;
 
     right: 15px;
-
     top: 50%;
 
-    transform:
-        translateY(-50%);
+    transform: translateY(-50%);
 
     pointer-events: none;
 }
 
 
-
 /* =========================================================
-CONTROLES
+   CONTROLES
 ========================================================= */
 
 .controls-container {
     display: flex;
 
     justify-content: center;
+    align-items: center;
 
     flex-wrap: wrap;
 
     gap: 10px;
 
-    margin:
-        30px 0;
+    margin: 30px 0;
 }
 
 .episode-button {
     border: none;
 
-    padding:
-        14px
-        22px;
+    padding: 14px 22px;
 
     border-radius: 5px;
 
@@ -728,8 +668,19 @@ CONTROLES
     display: flex;
 
     align-items: center;
+    justify-content: center;
 
     gap: 10px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+    min-height: 46px;
+}
+
+.episode-button:hover {
+    transform: translateY(-1px);
 }
 
 .episode-button.primary {
@@ -741,26 +692,23 @@ CONTROLES
 }
 
 .episode-button.secondary {
-    background:
-        #242424;
+    background: #242424;
 }
 
 .episode-button.secondary:hover {
-    background:
-        #333;
+    background: #333;
 }
 
 
-
 /* =========================================================
-VIDEO DE EPISODIOS
+   VIDEO DE EPISODIOS
 ========================================================= */
 
 .player-section {
+    width: 100%;
     max-width: 1000px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 }
 
 .video-container {
@@ -776,18 +724,14 @@ VIDEO DE EPISODIOS
 
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
     box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.6);
+        0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 .video-container video {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
@@ -803,15 +747,15 @@ VIDEO DE EPISODIOS
 
 .video-container iframe {
     width: 100%;
-
     height: 100%;
 
     border: none;
 }
 
 .player-placeholder {
-    width: 100%;
+    position: relative;
 
+    width: 100%;
     height: 100%;
 
     display: flex;
@@ -819,25 +763,24 @@ VIDEO DE EPISODIOS
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     color: #888;
 
     text-align: center;
+
+    padding: 20px;
 }
 
 .placeholder-glow {
     position: absolute;
 
     width: 180px;
-
     height: 180px;
 
     border-radius: 50%;
 
-    background:
-        rgba(229,9,20,.08);
+    background: rgba(229, 9, 20, 0.08);
 
     filter: blur(30px);
 
@@ -848,7 +791,6 @@ VIDEO DE EPISODIOS
     position: relative;
 
     width: 70px;
-
     height: 70px;
 
     border-radius: 50%;
@@ -856,11 +798,9 @@ VIDEO DE EPISODIOS
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    background:
-        #e50914;
+    background: #e50914;
 
     color: white;
 
@@ -884,27 +824,26 @@ VIDEO DE EPISODIOS
 
     color: white;
 
-    margin:
-        10px 0;
+    margin: 10px 0;
 }
 
 .player-placeholder p {
     position: relative;
 
     color: #777;
+
+    max-width: 400px;
 }
 
 
-
 /* =========================================================
-ESTADO VIDEO
+   ESTADO VIDEO
 ========================================================= */
 
 .player-status-row {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
     margin-top: 12px;
@@ -912,6 +851,8 @@ ESTADO VIDEO
     color: #888;
 
     font-size: 13px;
+
+    gap: 15px;
 }
 
 .player-status {
@@ -920,12 +861,13 @@ ESTADO VIDEO
     align-items: center;
 
     gap: 8px;
+
+    min-width: 0;
 }
 
 .status-dot,
 .footer-status-dot {
     width: 8px;
-
     height: 8px;
 
     border-radius: 50%;
@@ -933,18 +875,21 @@ ESTADO VIDEO
     background: #22c55e;
 
     display: inline-block;
+
+    flex-shrink: 0;
 }
 
 .player-current {
     color: #e50914;
 
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 
-
 /* =========================================================
-ACCIONES INFERIORES
+   ACCIONES INFERIORES
 ========================================================= */
 
 .series-actions {
@@ -960,50 +905,45 @@ ACCIONES INFERIORES
 }
 
 .action-button {
-    border:
-        1px solid
-        rgba(255,255,255,.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
-    background:
-        #151515;
+    background: #151515;
 
     color: white;
 
     text-decoration: none;
 
-    padding:
-        12px 20px;
+    padding: 12px 20px;
 
     border-radius: 5px;
 
     cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
 }
 
 .action-button:hover {
-    background:
-        #242424;
+    background: #242424;
 }
 
 
-
 /* =========================================================
-INFO
+   INFORMACION
 ========================================================= */
 
 .bottom-info {
     display: grid;
 
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 
-    padding:
-        30px 8%
-        70px;
+    padding: 30px 8% 70px;
 
     background: #050505;
 
@@ -1021,31 +961,29 @@ INFO
 
     padding: 20px;
 
-    background:
-        rgba(255,255,255,.035);
+    background: rgba(255, 255, 255, 0.035);
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 8px;
+
+    min-width: 0;
 }
 
 .info-card-icon {
     min-width: 45px;
 
+    width: 45px;
     height: 45px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 5px;
 
-    background:
-        #e50914;
+    background: #e50914;
 
     font-size: 12px;
 
@@ -1058,16 +996,19 @@ INFO
     flex-direction: column;
 
     gap: 5px;
+
+    min-width: 0;
 }
 
 .info-card-content strong {
     color: #eee;
+
+    overflow-wrap: anywhere;
 }
 
 
-
 /* =========================================================
-LATERAL
+   LATERAL
 ========================================================= */
 
 .episodes-side-label {
@@ -1077,11 +1018,9 @@ LATERAL
 
     top: 50%;
 
-    transform:
-        rotate(90deg);
+    transform: rotate(90deg);
 
-    color:
-        rgba(255,255,255,.2);
+    color: rgba(255, 255, 255, 0.2);
 
     font-size: 10px;
 
@@ -1093,16 +1032,14 @@ LATERAL
 }
 
 
-
 /* =========================================================
-FOOTER
+   FOOTER
 ========================================================= */
 
 footer {
     background: #020202;
 
-    padding:
-        50px 8% 25px;
+    padding: 50px 8% 25px;
 
     position: relative;
 
@@ -1112,8 +1049,7 @@ footer {
 .footer-inner {
     display: grid;
 
-    grid-template-columns:
-        2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
 
     gap: 40px;
 
@@ -1130,18 +1066,18 @@ footer {
 
 .footer-logo-mark {
     width: 35px;
-
     height: 35px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background: #e50914;
 
     font-weight: bold;
+
+    flex-shrink: 0;
 }
 
 .footer-logo-text {
@@ -1170,6 +1106,8 @@ footer {
     color: #999;
 
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .footer-link:hover {
@@ -1189,11 +1127,9 @@ footer {
 .footer-divider {
     height: 1px;
 
-    background:
-        #222;
+    background: #222;
 
-    margin:
-        40px 0 20px;
+    margin: 40px 0 20px;
 }
 
 .footer-bottom {
@@ -1201,29 +1137,27 @@ footer {
 
     justify-content: space-between;
 
+    gap: 15px;
+
     color: #555;
 
     font-size: 12px;
 }
 
 
-
 /* =========================================================
-RESPONSIVE
+   TABLET
 ========================================================= */
 
-@media (
-    max-width: 768px
-) {
+@media (max-width: 768px) {
 
     .hero-section {
+        min-height: 750px;
+
         padding:
             80px 25px
             130px;
-
-        min-height: 750px;
     }
-
 
     .hero-red-line {
         left: 12px;
@@ -1231,28 +1165,26 @@ RESPONSIVE
         height: 180px;
     }
 
+    .hero-content {
+        width: 100%;
+    }
 
     .serie-title {
         font-size: 65px;
     }
 
-
     .serie-description p {
         font-size: 16px;
     }
-
 
     .episode-section {
         padding:
             60px 20px;
     }
 
-
     .episode-selectors {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .section-heading {
         align-items: flex-start;
@@ -1260,26 +1192,20 @@ RESPONSIVE
         gap: 20px;
     }
 
-
     .section-title-row h2 {
         font-size: 30px;
     }
 
-
     .bottom-info {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         padding:
             30px 20px;
     }
 
-
     .footer-inner {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .footer-bottom {
         flex-direction: column;
@@ -1290,97 +1216,637 @@ RESPONSIVE
 }
 
 
+/* =========================================================
+   MOVIL
+========================================================= */
 
-@media (
-    max-width: 480px
-) {
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        min-height: 700px;
+
+        padding:
+            70px 18px
+            100px;
+    }
+
+    .hero-red-line {
+        left: 7px;
+
+        width: 3px;
+        height: 150px;
+    }
+
+    .serie-brand {
+        gap: 8px;
+
+        margin-bottom: 22px;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+
+        font-size: 20px;
+    }
+
+    .brand-name {
+        font-size: 14px;
+
+        letter-spacing: 2px;
+    }
+
+    .original-label {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .original-line {
+        width: 25px;
+    }
+
+
+    /* TITULO */
 
     .serie-title {
         font-size: 52px;
 
         letter-spacing: -3px;
+
+        margin: 18px 0;
     }
 
 
+    /* META */
+
     .serie-meta {
+        font-size: 13px;
+
+        gap: 7px;
+
+        margin-bottom: 20px;
+    }
+
+    .quality {
+        padding: 3px 6px;
+
+        font-size: 10px;
+    }
+
+
+    /* DESCRIPCION */
+
+    .serie-description p {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       BOTONES HERO - COMPACTOS
+    ===================================================== */
+
+    .hero-actions {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        width: 100%;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 42px;
+
+        padding: 8px 10px;
+
+        font-size: 13px;
+
+        gap: 6px;
+
+        border-radius: 4px;
+    }
+
+    .hero-actions strong {
+        font-size: 13px;
+    }
+
+    .play-symbol,
+    .info-symbol {
         font-size: 13px;
     }
 
 
-    .hero-actions {
-        flex-direction: column;
+    /* =====================================================
+       REACCIONES COMPACTAS
+    ===================================================== */
 
-        align-items: stretch;
+    .reaction-area {
+        margin-top: 20px;
     }
 
+    .reaction-question {
+        font-size: 13px;
 
-    .hero-actions button,
-    .hero-actions a {
-        justify-content: center;
+        margin-bottom: 8px;
     }
 
+    .like-dislike-buttons {
+        display: grid;
 
-    .controls-container {
-        flex-direction: column;
-    }
+        grid-template-columns: 1fr 1fr;
 
-
-    .episode-button {
-        justify-content: center;
+        gap: 7px;
 
         width: 100%;
     }
-
-
-    .like-dislike-buttons {
-        flex-direction: column;
-    }
-
 
     .reaction-button {
         width: 100%;
+
+        min-width: 0;
+
+        height: 38px;
+
+        padding: 6px 7px;
+
+        font-size: 11px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .reaction-icon {
+        font-size: 12px;
     }
 
 
-    .hero-section {
-        min-height: 700px;
+    /* =====================================================
+       FADE
+    ===================================================== */
+
+    .hero-bottom-fade {
+        height: 180px;
     }
 
+
+    /* =====================================================
+       EPISODIOS
+    ===================================================== */
+
+    .episode-section {
+        padding:
+            45px 14px;
+    }
+
+    .section-heading {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        margin-bottom: 20px;
+    }
+
+    .section-title-row {
+        gap: 10px;
+    }
+
+    .section-title-row h2 {
+        font-size: 25px;
+    }
+
+    .heading-red-line {
+        width: 45px;
+        height: 2px;
+    }
+
+    .current-episode-badge {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 16px;
+
+        margin-bottom: 18px;
+    }
+
+    .explorer-header h3 {
+        font-size: 19px;
+    }
+
+    .explorer-kicker {
+        font-size: 9px;
+    }
+
+    .explorer-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+    .episode-selectors {
+        gap: 12px;
+
+        margin-top: 16px;
+    }
+
+    .selector-box label {
+        font-size: 9px;
+
+        margin-bottom: 6px;
+    }
+
+    .select-wrapper select {
+        padding: 11px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       CONTROLES DE EPISODIOS
+       NO OCUPAN TODO EL ALTO
+    ===================================================== */
+
+    .controls-container {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1.4fr
+            1fr;
+
+        width: 100%;
+
+        gap: 6px;
+
+        margin: 18px 0;
+    }
+
+    .episode-button {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 40px;
+
+        height: 40px;
+
+        padding: 6px 5px;
+
+        font-size: 11px;
+
+        gap: 4px;
+
+        border-radius: 4px;
+    }
+
+    .button-icon {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       VIDEO
+    ===================================================== */
+
+    .player-section {
+        width: 100%;
+    }
+
+    .video-container {
+        border-radius: 6px;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    .placeholder-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 17px;
+
+        margin-bottom: 8px;
+    }
+
+    .placeholder-label {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .player-placeholder h3 {
+        font-size: 15px;
+
+        margin: 7px 0;
+    }
+
+    .player-placeholder p {
+        font-size: 11px;
+
+        max-width: 250px;
+    }
+
+    .placeholder-glow {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* =====================================================
+       ESTADO VIDEO
+    ===================================================== */
+
+    .player-status-row {
+        margin-top: 8px;
+
+        font-size: 10px;
+
+        gap: 8px;
+    }
+
+    .player-current {
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 7px;
+
+        margin-top: 18px;
+    }
+
+    .action-button {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 40px;
+
+        padding: 7px 5px;
+
+        font-size: 10px;
+
+        text-align: center;
+
+        gap: 5px;
+    }
+
+
+    /* =====================================================
+       INFORMACION
+    ===================================================== */
+
+    .bottom-info {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding:
+            25px 14px
+            45px;
+    }
+
+    .info-card {
+        padding: 14px;
+
+        gap: 10px;
+    }
+
+    .info-card-icon {
+        min-width: 38px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .info-card-content {
+        font-size: 13px;
+    }
+
+    .info-card-label {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       ETIQUETA LATERAL
+    ===================================================== */
+
+    .episodes-side-label {
+        display: none;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding:
+            35px 18px
+            20px;
+    }
+
+    .footer-inner {
+        gap: 25px;
+    }
+
+    .footer-logo-text {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .footer-description {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 9px;
+    }
+
+    .footer-link {
+        font-size: 13px;
+    }
+
+    .footer-status {
+        font-size: 12px;
+    }
+
+    .footer-divider {
+        margin:
+            25px 0
+            15px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+
+        gap: 6px;
+    }
+
+
+    /* =====================================================
+       VIDEO MOVIL
+    ===================================================== */
 
     .video-trailer video {
-        object-position: center;
+        object-position: center center;
     }
 
 }
 
-.hero-section {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
+
+/* =========================================================
+   TELEFONOS MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .serie-title {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+    .serie-meta {
+        font-size: 11px;
+
+        gap: 5px;
+    }
+
+    .hero-actions {
+        gap: 5px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        height: 38px;
+
+        padding:
+            6px 5px;
+
+        font-size: 11px;
+    }
+
+    .like-dislike-buttons {
+        gap: 5px;
+    }
+
+    .reaction-button {
+        height: 35px;
+
+        font-size: 10px;
+    }
+
+    .episode-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .controls-container {
+        gap: 4px;
+    }
+
+    .episode-button {
+        height: 37px;
+
+        font-size: 9px;
+    }
+
+    .series-actions {
+        gap: 5px;
+    }
+
+    .action-button {
+        font-size: 9px;
+    }
 }
 
-#trailer {
+
+/* =========================================================
+   SOPORTE DEL VIDEO HERO
+========================================================= */
+
+.hero-section #trailer {
     position: absolute;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     z-index: 0;
 }
 
-.trailer-overlay {
+.hero-section .trailer-overlay {
     position: absolute;
+
     inset: 0;
+
     z-index: 1;
 }
 
-.trailer-vignette {
+.hero-section .trailer-vignette {
     position: absolute;
+
     inset: 0;
+
     z-index: 2;
 }
 
-.hero-content {
+.hero-section .hero-content {
     position: relative;
+
     z-index: 3;
 }
