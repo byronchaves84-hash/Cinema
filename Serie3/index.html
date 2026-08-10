@@ -35,67 +35,63 @@
 <body>
 
 
-<!-- =========================================================
-     FONDO / TRAILER
-========================================================= -->
+<!-- =====================================================
+     VIDEO DE FONDO GLOBAL
+     ESTE VIDEO QUEDA DETRAS DE TODA LA PAGINA
+====================================================== -->
 
-
-<video
-    id="trailer"
-    autoplay
-    loop
-    muted
-    playsinline
-    preload="auto"
->
-    <source
-        src="./peli/The Walking.mp4"
-        type="video/mp4"
-    >
-</video>
-
-<div class="trailer-overlay"></div>
-
-<div class="trailer-vignette"></div>
-```
-
-
-
-
-<!-- =========================================================
-     FONDO DEL VIDEO DEL EPISODIO
-========================================================= -->
-
-<div
-    class="video-background"
-    id="videoBackground"
->
+<div class="global-video-background">
 
     <video
-        id="videoPlayer"
+        id="trailer"
+        autoplay
+        loop
         muted
         playsinline
-        preload="metadata"
-    ></video>
+        preload="auto"
+    >
+
+        <source
+            src="./peli/The Walking.mp4"
+            type="video/mp4"
+        >
+
+    </video>
 
 
-    <div class="background-overlay"></div>
+    <!-- OSCURECIMIENTO GENERAL -->
+
+    <div class="global-video-dark"></div>
+
+
+    <!-- DEGRADADO IZQUIERDO -->
+
+    <div class="global-video-left"></div>
+
+
+    <!-- DEGRADADO INFERIOR -->
+
+    <div class="global-video-bottom"></div>
+
+
+    <!-- VIÑETA -->
+
+    <div class="global-video-vignette"></div>
 
 </div>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      CONTENEDOR PRINCIPAL
-========================================================= -->
+====================================================== -->
 
 <main class="serie-container">
 
 
-
-    <!-- =====================================================
+    <!-- =================================================
          HERO
-    ====================================================== -->
+    ================================================== -->
 
     <section class="hero-section">
 
@@ -231,11 +227,6 @@
 
 
 
-                <!--
-                CAMBIA ESTA URL POR LA URL REAL
-                DE INFORMACIÓN DE BREAKING BAD
-                -->
-
                 <a
                     href="./episodios/Breaking-Bad.html"
                     class="hero-info-button"
@@ -323,12 +314,11 @@
 
 
 
-    <!-- =====================================================
+    <!-- =================================================
          EPISODIOS
-    ====================================================== -->
+    ================================================== -->
 
     <section class="episode-section">
-
 
 
         <!-- CABECERA -->
@@ -354,7 +344,6 @@
                 </div>
 
             </div>
-
 
 
             <div
@@ -673,9 +662,9 @@
 
 
 
-    <!-- =====================================================
+    <!-- =================================================
          INFORMACION
-    ====================================================== -->
+    ================================================== -->
 
     <section class="bottom-info">
 
@@ -769,11 +758,11 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+====================================================== -->
 
-<footer class="site-footer">
+<footer>
 
 
     <div class="footer-inner">
@@ -881,6 +870,11 @@
 
 
 </footer>
+
+
+
+
+
 
 
 
