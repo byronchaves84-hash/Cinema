@@ -1847,3 +1847,71 @@ RESPETO A REDUCED MOTION
         transition-duration: .01ms !important;
     }
 }
+
+
+
+
+
+
+/* =========================================================
+   BOTONES DE EPISODIOS EN CELULAR
+   SOLO REDUCE EL ESPACIO QUE OCUPAN
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .controls-container.mobile-compact-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin: 15px 0 !important;
+        width: 100% !important;
+    }
+
+    .controls-container.mobile-compact-buttons .episode-button {
+        width: auto !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 10px 8px !important;
+        margin: 0 !important;
+        gap: 5px !important;
+        font-size: 13px !important;
+        line-height: 1 !important;
+        min-height: 40px !important;
+    }
+
+    .controls-container.mobile-compact-buttons .button-icon {
+        font-size: 15px !important;
+        line-height: 1 !important;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   SOLO REDUCE AÚN MÁS EL ESPACIO DE LOS BOTONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .controls-container.mobile-compact-buttons {
+        gap: 5px !important;
+        margin: 12px 0 !important;
+    }
+
+    .controls-container.mobile-compact-buttons .episode-button {
+        padding: 9px 6px !important;
+        font-size: 12px !important;
+        min-height: 38px !important;
+        gap: 4px !important;
+    }
+
+    .controls-container.mobile-compact-buttons .button-icon {
+        font-size: 14px !important;
+    }
+
+}
