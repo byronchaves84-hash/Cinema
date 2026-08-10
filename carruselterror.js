@@ -5,151 +5,145 @@
 
 
 // =========================================================
-// CARRUSEL NORMAL
+// CARRUSEL DE SERIES
 // =========================================================
 
-const normalCarousel = document.querySelector('.carousel-container');
-const normalImages = document.querySelector('.carousel-images');
-const normalItems = document.querySelectorAll(
-    '.carousel-images .anime-item'
-);
+const seriesCarousel =
+    document.getElementById("seriesCarousel");
 
-let normalCurrentIndex = 0;
-const normalTotalImages = normalItems.length;
+const seriesTrack =
+    seriesCarousel
+        ? seriesCarousel.querySelector(".carousel-track")
+        : null;
+
+const seriesCards =
+    seriesTrack
+        ? seriesTrack.querySelectorAll(".series-card")
+        : [];
+
+let seriesPosition = 0;
 
 
-// ---------------------------------------------------------
-// Mover carrusel normal en PC
-// ---------------------------------------------------------
+// =========================================================
+// MOVER SERIES EN PC
+// =========================================================
 
-function changeNormalImage() {
+function moveSeries(direction) {
 
+    // En móvil las flechas no hacen nada.
+    // El usuario desliza directamente.
     if (window.innerWidth <= 600) {
-        normalImages.style.transform = 'none';
         return;
     }
 
-    if (!normalImages) return;
-
-    const itemWidth = 280 + 15;
-
-    const offset = -normalCurrentIndex * itemWidth;
-
-    normalImages.style.transform =
-        `translateX(${offset}px)`;
-}
-
-
-// ---------------------------------------------------------
-// Siguiente
-// ---------------------------------------------------------
-
-function nextNormalImage() {
-
-    if (normalTotalImages === 0) return;
-
-    normalCurrentIndex++;
-
-    if (normalCurrentIndex >= normalTotalImages) {
-        normalCurrentIndex = 0;
+    if (!seriesTrack || !seriesCards.length) {
+        return;
     }
 
-    changeNormalImage();
-}
+    const gap = 18;
+
+    const cardWidth =
+        seriesCards[0].offsetWidth + gap;
+
+    const visibleCards =
+        Math.floor(
+            seriesCarousel.offsetWidth / cardWidth
+        );
+
+    const maxPosition =
+        Math.max(
+            0,
+            seriesCards.length - visibleCards
+        );
+
+    seriesPosition += direction;
 
 
-// ---------------------------------------------------------
-// Anterior
-// ---------------------------------------------------------
-
-function prevNormalImage() {
-
-    if (normalTotalImages === 0) return;
-
-    normalCurrentIndex--;
-
-    if (normalCurrentIndex < 0) {
-        normalCurrentIndex = normalTotalImages - 1;
+    // No permitir pasar del principio
+    if (seriesPosition < 0) {
+        seriesPosition = 0;
     }
 
-    changeNormalImage();
+
+    // No permitir pasar del final
+    if (seriesPosition > maxPosition) {
+        seriesPosition = maxPosition;
+    }
+
+
+    seriesTrack.style.transform =
+        `translateX(-${seriesPosition * cardWidth}px)`;
 }
 
 
-// ---------------------------------------------------------
-// Botones normales
-// ---------------------------------------------------------
+// =========================================================
+// TÁCTIL — SERIES
+// =========================================================
 
-const normalNextButton = document.querySelector('.next');
-const normalPrevButton = document.querySelector('.prev');
+if (seriesCarousel) {
 
-if (normalNextButton) {
-    normalNextButton.addEventListener(
-        'click',
-        nextNormalImage
-    );
-}
-
-if (normalPrevButton) {
-    normalPrevButton.addEventListener(
-        'click',
-        prevNormalImage
-    );
-}
+    let seriesStartX = 0;
+    let seriesStartY = 0;
 
 
-// ---------------------------------------------------------
-// TÁCTIL — CARRUSEL NORMAL
-// ---------------------------------------------------------
-
-if (normalCarousel) {
-
-    let startX = 0;
-    let startY = 0;
-
-    normalCarousel.addEventListener(
-        'touchstart',
+    seriesCarousel.addEventListener(
+        "touchstart",
         function (event) {
 
-            startX = event.touches[0].clientX;
-            startY = event.touches[0].clientY;
+            seriesStartX =
+                event.touches[0].clientX;
+
+            seriesStartY =
+                event.touches[0].clientY;
 
         },
         { passive: true }
     );
 
 
-    normalCarousel.addEventListener(
-        'touchend',
+    seriesCarousel.addEventListener(
+        "touchend",
         function (event) {
 
-            const endX =
+            const seriesEndX =
                 event.changedTouches[0].clientX;
 
-            const endY =
+            const seriesEndY =
                 event.changedTouches[0].clientY;
 
+
             const differenceX =
-                startX - endX;
+                seriesStartX - seriesEndX;
 
             const differenceY =
-                startY - endY;
+                seriesStartY - seriesEndY;
 
 
-            // Solo detectar movimiento horizontal
+            // Solo detectar deslizamientos horizontales
             if (
                 Math.abs(differenceX) >
                 Math.abs(differenceY)
             ) {
 
-                // Deslizar hacia izquierda
+                // Deslizar hacia la izquierda
                 if (differenceX > 50) {
-                    nextNormalImage();
+
+                    seriesCarousel.scrollBy({
+                        left: 185,
+                        behavior: "smooth"
+                    });
+
                 }
 
-                // Deslizar hacia derecha
+
+                // Deslizar hacia la derecha
                 if (differenceX < -50) {
-                    prevNormalImage();
+
+                    seriesCarousel.scrollBy({
+                        left: -185,
+                        behavior: "smooth"
+                    });
+
                 }
 
             }
@@ -165,122 +159,75 @@ if (normalCarousel) {
 // =========================================================
 
 const horrorCarousel =
-    document.querySelector('.horror-carousel-container');
+    document.getElementById("horrorCarousel");
 
-const horrorImagesContainer =
-    document.querySelector('.horror-carousel-images');
+const horrorTrack =
+    horrorCarousel
+        ? horrorCarousel.querySelector(".carousel-track")
+        : null;
 
-const horrorItems =
-    document.querySelectorAll(
-        '.horror-carousel-images .horror-anime-item'
-    );
+const horrorCards =
+    horrorTrack
+        ? horrorTrack.querySelectorAll(".horror-card")
+        : [];
 
-let horrorCurrentIndex = 0;
-
-const horrorTotalImages =
-    horrorItems.length;
+let horrorPosition = 0;
 
 
-// ---------------------------------------------------------
-// Mover carrusel de terror en PC
-// ---------------------------------------------------------
+// =========================================================
+// MOVER TERROR EN PC
+// =========================================================
 
-function changeHorrorImage() {
+function moveHorror(direction) {
 
+    // En móvil usamos desplazamiento táctil
     if (window.innerWidth <= 600) {
-
-        if (horrorImagesContainer) {
-            horrorImagesContainer.style.transform =
-                'none';
-        }
-
         return;
     }
 
-    if (!horrorImagesContainer) return;
-
-    const itemWidth = 280 + 15;
-
-    const offset =
-        -horrorCurrentIndex * itemWidth;
-
-    horrorImagesContainer.style.transform =
-        `translateX(${offset}px)`;
-}
-
-
-// ---------------------------------------------------------
-// Siguiente terror
-// ---------------------------------------------------------
-
-function nextHorrorImage() {
-
-    if (horrorTotalImages === 0) return;
-
-    horrorCurrentIndex++;
-
-    if (
-        horrorCurrentIndex >=
-        horrorTotalImages
-    ) {
-        horrorCurrentIndex = 0;
+    if (!horrorTrack || !horrorCards.length) {
+        return;
     }
 
-    changeHorrorImage();
-}
+    const gap = 18;
+
+    const cardWidth =
+        horrorCards[0].offsetWidth + gap;
+
+    const visibleCards =
+        Math.floor(
+            horrorCarousel.offsetWidth / cardWidth
+        );
+
+    const maxPosition =
+        Math.max(
+            0,
+            horrorCards.length - visibleCards
+        );
+
+    horrorPosition += direction;
 
 
-// ---------------------------------------------------------
-// Anterior terror
-// ---------------------------------------------------------
-
-function prevHorrorImage() {
-
-    if (horrorTotalImages === 0) return;
-
-    horrorCurrentIndex--;
-
-    if (horrorCurrentIndex < 0) {
-        horrorCurrentIndex =
-            horrorTotalImages - 1;
+    // Principio
+    if (horrorPosition < 0) {
+        horrorPosition = 0;
     }
 
-    changeHorrorImage();
+
+    // Final
+    if (horrorPosition > maxPosition) {
+        horrorPosition = maxPosition;
+    }
+
+
+    horrorTrack.style.transform =
+        `translateX(-${horrorPosition * cardWidth}px)`;
 }
 
 
-// ---------------------------------------------------------
-// Botones terror
-// ---------------------------------------------------------
-
-const horrorNextButton =
-    document.querySelector('.next-horror');
-
-const horrorPrevButton =
-    document.querySelector('.prev-horror');
-
-
-if (horrorNextButton) {
-
-    horrorNextButton.addEventListener(
-        'click',
-        nextHorrorImage
-    );
-}
-
-
-if (horrorPrevButton) {
-
-    horrorPrevButton.addEventListener(
-        'click',
-        prevHorrorImage
-    );
-}
-
-
-// ---------------------------------------------------------
-// TÁCTIL — CARRUSEL DE TERROR
-// ---------------------------------------------------------
+// =========================================================
+// TÁCTIL — TERROR
+// =========================================================
 
 if (horrorCarousel) {
 
@@ -289,7 +236,7 @@ if (horrorCarousel) {
 
 
     horrorCarousel.addEventListener(
-        'touchstart',
+        "touchstart",
         function (event) {
 
             horrorStartX =
@@ -304,7 +251,7 @@ if (horrorCarousel) {
 
 
     horrorCarousel.addEventListener(
-        'touchend',
+        "touchend",
         function (event) {
 
             const horrorEndX =
@@ -321,7 +268,7 @@ if (horrorCarousel) {
                 horrorStartY - horrorEndY;
 
 
-            // Solo detectar movimiento horizontal
+            // Solo movimiento horizontal
             if (
                 Math.abs(differenceX) >
                 Math.abs(differenceY)
@@ -329,12 +276,23 @@ if (horrorCarousel) {
 
                 // Deslizar izquierda
                 if (differenceX > 50) {
-                    nextHorrorImage();
+
+                    horrorCarousel.scrollBy({
+                        left: 195,
+                        behavior: "smooth"
+                    });
+
                 }
+
 
                 // Deslizar derecha
                 if (differenceX < -50) {
-                    prevHorrorImage();
+
+                    horrorCarousel.scrollBy({
+                        left: -195,
+                        behavior: "smooth"
+                    });
+
                 }
 
             }
@@ -346,32 +304,103 @@ if (horrorCarousel) {
 
 
 // =========================================================
-// CAMBIO DE TAMAÑO DE VENTANA
+// BOTONES DE SERIES
+// =========================================================
+
+const nextSeriesButton =
+    document.querySelector(".next-series");
+
+const prevSeriesButton =
+    document.querySelector(".prev-series");
+
+
+if (nextSeriesButton) {
+
+    nextSeriesButton.addEventListener(
+        "click",
+        function () {
+            moveSeries(1);
+        }
+    );
+
+}
+
+
+if (prevSeriesButton) {
+
+    prevSeriesButton.addEventListener(
+        "click",
+        function () {
+            moveSeries(-1);
+        }
+    );
+
+}
+
+
+// =========================================================
+// BOTONES DE TERROR
+// =========================================================
+
+const nextHorrorButton =
+    document.querySelector(".next-horror");
+
+const prevHorrorButton =
+    document.querySelector(".prev-horror");
+
+
+if (nextHorrorButton) {
+
+    nextHorrorButton.addEventListener(
+        "click",
+        function () {
+            moveHorror(1);
+        }
+    );
+
+}
+
+
+if (prevHorrorButton) {
+
+    prevHorrorButton.addEventListener(
+        "click",
+        function () {
+            moveHorror(-1);
+        }
+    );
+
+}
+
+
+// =========================================================
+// REAJUSTAR AL CAMBIAR TAMAÑO
 // =========================================================
 
 window.addEventListener(
-    'resize',
+    "resize",
     function () {
 
-        if (window.innerWidth > 600) {
+        seriesPosition = 0;
+        horrorPosition = 0;
 
-            changeNormalImage();
-            changeHorrorImage();
 
-        } else {
+        if (seriesTrack) {
 
-            if (normalImages) {
-                normalImages.style.transform =
-                    'none';
-            }
+            seriesTrack.style.transform =
+                "translateX(0)";
 
-            if (horrorImagesContainer) {
-                horrorImagesContainer.style.transform =
-                    'none';
-            }
+        }
+
+
+        if (horrorTrack) {
+
+            horrorTrack.style.transform =
+                "translateX(0)";
 
         }
 
     }
 );
 ```
+
