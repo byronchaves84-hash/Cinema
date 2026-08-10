@@ -1,5 +1,6 @@
+```css
 /* =========================================================
-RESET
+   RESET
 ========================================================= */
 
 * {
@@ -8,9 +9,11 @@ RESET
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family:
@@ -30,7 +33,7 @@ body {
 
 
 /* =========================================================
-TRAILER
+   TRAILER
 ========================================================= */
 
 .video-trailer {
@@ -39,7 +42,6 @@ TRAILER
     inset: 0;
 
     width: 100%;
-
     height: 100vh;
 
     z-index: 0;
@@ -49,15 +51,13 @@ TRAILER
     background: #050505;
 }
 
+
 .video-trailer video {
     position: absolute;
 
-    top: 0;
-
-    left: 0;
+    inset: 0;
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -66,6 +66,7 @@ TRAILER
 
     z-index: 0;
 }
+
 
 .trailer-overlay {
     position: absolute;
@@ -82,6 +83,7 @@ TRAILER
 
     z-index: 1;
 }
+
 
 .trailer-vignette {
     position: absolute;
@@ -103,7 +105,7 @@ TRAILER
 
 
 /* =========================================================
-FONDO DEL VIDEO
+   FONDO VIDEO EPISODIO
 ========================================================= */
 
 .video-background {
@@ -116,13 +118,14 @@ FONDO DEL VIDEO
     display: none;
 }
 
+
 .video-background video {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 }
+
 
 .background-overlay {
     position: absolute;
@@ -136,7 +139,7 @@ FONDO DEL VIDEO
 
 
 /* =========================================================
-CONTENEDOR
+   CONTENEDOR
 ========================================================= */
 
 .serie-container {
@@ -152,7 +155,7 @@ CONTENEDOR
 
 
 /* =========================================================
-HERO
+   HERO
 ========================================================= */
 
 .hero-section {
@@ -169,6 +172,7 @@ HERO
         8%
         180px;
 }
+
 
 .hero-red-line {
     position: absolute;
@@ -188,9 +192,13 @@ HERO
         rgba(229,9,20,.6);
 }
 
+
 .hero-content {
+    width: 100%;
+
     max-width: 750px;
 }
+
 
 .serie-brand {
     display: flex;
@@ -202,15 +210,14 @@ HERO
     margin-bottom: 30px;
 }
 
+
 .brand-mark {
     width: 42px;
-
     height: 42px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background: #e50914;
@@ -220,6 +227,7 @@ HERO
     font-weight: 900;
 }
 
+
 .brand-name {
     font-weight: 900;
 
@@ -227,6 +235,7 @@ HERO
 
     font-size: 18px;
 }
+
 
 .original-label {
     display: flex;
@@ -242,6 +251,7 @@ HERO
     color: #aaa;
 }
 
+
 .original-line {
     width: 35px;
 
@@ -253,7 +263,7 @@ HERO
 
 
 /* =========================================================
-TITULO
+   TITULO
 ========================================================= */
 
 .serie-title {
@@ -283,6 +293,7 @@ TITULO
         rgba(0,0,0,.8);
 }
 
+
 .serie-title span:last-child {
     color: #e50914;
 }
@@ -290,7 +301,7 @@ TITULO
 
 
 /* =========================================================
-META
+   META
 ========================================================= */
 
 .serie-meta {
@@ -307,6 +318,7 @@ META
     margin-bottom: 25px;
 }
 
+
 .quality {
     border:
         1px solid
@@ -320,6 +332,7 @@ META
     font-weight: bold;
 }
 
+
 .dot {
     color: #777;
 }
@@ -327,12 +340,13 @@ META
 
 
 /* =========================================================
-DESCRIPCION
+   DESCRIPCION
 ========================================================= */
 
 .serie-description {
     max-width: 650px;
 }
+
 
 .serie-description p {
     color: #d1d1d1;
@@ -345,7 +359,7 @@ DESCRIPCION
 
 
 /* =========================================================
-ACCIONES
+   ACCIONES HERO
 ========================================================= */
 
 .hero-actions {
@@ -357,6 +371,7 @@ ACCIONES
 
     margin-top: 30px;
 }
+
 
 .hero-actions button,
 .hero-actions a {
@@ -370,6 +385,8 @@ ACCIONES
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 10px;
 
     padding:
@@ -381,7 +398,11 @@ ACCIONES
     font-size: 16px;
 
     font-weight: bold;
+
+    transition:
+        .2s ease;
 }
+
 
 .hero-play-button {
     background: #ffffff;
@@ -389,11 +410,13 @@ ACCIONES
     color: #000000;
 }
 
+
 .hero-play-button:hover {
     background: #dddddd;
 
     transform: scale(1.03);
 }
+
 
 .hero-info-button {
     background:
@@ -401,6 +424,7 @@ ACCIONES
 
     color: white;
 }
+
 
 .hero-info-button:hover {
     background:
@@ -410,12 +434,13 @@ ACCIONES
 
 
 /* =========================================================
-REACCIONES
+   REACCIONES
 ========================================================= */
 
 .reaction-area {
     margin-top: 30px;
 }
+
 
 .reaction-question {
     display: block;
@@ -425,11 +450,13 @@ REACCIONES
     margin-bottom: 10px;
 }
 
+
 .like-dislike-buttons {
     display: flex;
 
     gap: 10px;
 }
+
 
 .reaction-button {
     background:
@@ -448,7 +475,11 @@ REACCIONES
     border-radius: 5px;
 
     cursor: pointer;
+
+    transition:
+        .2s ease;
 }
+
 
 .reaction-button:hover,
 .reaction-button.selected {
@@ -461,7 +492,7 @@ REACCIONES
 
 
 /* =========================================================
-FADE
+   FADE HERO
 ========================================================= */
 
 .hero-bottom-fade {
@@ -487,7 +518,7 @@ FADE
 
 
 /* =========================================================
-EPISODIOS
+   EPISODIOS
 ========================================================= */
 
 .episode-section {
@@ -503,15 +534,17 @@ EPISODIOS
         );
 }
 
+
 .section-heading {
     display: flex;
 
     justify-content: space-between;
 
-    align-items: end;
+    align-items: flex-end;
 
     margin-bottom: 35px;
 }
+
 
 .section-kicker,
 .explorer-kicker,
@@ -527,6 +560,7 @@ EPISODIOS
     font-weight: bold;
 }
 
+
 .section-title-row {
     display: flex;
 
@@ -535,11 +569,13 @@ EPISODIOS
     gap: 20px;
 }
 
+
 .section-title-row h2 {
     font-size: 38px;
 
     margin-top: 8px;
 }
+
 
 .heading-red-line {
     width: 80px;
@@ -548,6 +584,7 @@ EPISODIOS
 
     background: #e50914;
 }
+
 
 .current-episode-badge {
     background: #e50914;
@@ -561,7 +598,7 @@ EPISODIOS
 
 
 /* =========================================================
-EXPLORADOR
+   EXPLORADOR
 ========================================================= */
 
 .episode-explorer {
@@ -579,6 +616,7 @@ EXPLORADOR
     margin-bottom: 25px;
 }
 
+
 .explorer-header {
     display: flex;
 
@@ -587,11 +625,13 @@ EXPLORADOR
     align-items: center;
 }
 
+
 .explorer-header h3 {
     font-size: 25px;
 
     margin-top: 5px;
 }
+
 
 .explorer-toggle {
     border: none;
@@ -602,13 +642,13 @@ EXPLORADOR
     color: white;
 
     width: 40px;
-
     height: 40px;
 
     border-radius: 50%;
 
     cursor: pointer;
 }
+
 
 .episode-selectors {
     display: grid;
@@ -624,9 +664,11 @@ EXPLORADOR
     margin-top: 25px;
 }
 
+
 .episode-selectors.collapsed {
     display: none;
 }
+
 
 .selector-box label {
     display: block;
@@ -640,9 +682,11 @@ EXPLORADOR
     margin-bottom: 8px;
 }
 
+
 .select-wrapper {
     position: relative;
 }
+
 
 .select-wrapper select {
     width: 100%;
@@ -665,7 +709,15 @@ EXPLORADOR
     font-size: 15px;
 
     cursor: pointer;
+
+    outline: none;
 }
+
+
+.select-wrapper select:focus {
+    border-color: #e50914;
+}
+
 
 .select-arrow {
     position: absolute;
@@ -683,7 +735,7 @@ EXPLORADOR
 
 
 /* =========================================================
-CONTROLES
+   CONTROLES
 ========================================================= */
 
 .controls-container {
@@ -698,6 +750,7 @@ CONTROLES
     margin:
         30px 0;
 }
+
 
 .episode-button {
     border: none;
@@ -718,21 +771,30 @@ CONTROLES
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 10px;
+
+    transition:
+        .2s ease;
 }
+
 
 .episode-button.primary {
     background: #e50914;
 }
 
+
 .episode-button.primary:hover {
     background: #b20710;
 }
+
 
 .episode-button.secondary {
     background:
         #242424;
 }
+
 
 .episode-button.secondary:hover {
     background:
@@ -742,15 +804,18 @@ CONTROLES
 
 
 /* =========================================================
-VIDEO
+   REPRODUCTOR
+   IMPORTANTE: UNA SOLA VERSION
 ========================================================= */
 
 .player-section {
+    width: 100%;
+
     max-width: 1000px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 }
+
 
 .video-container {
     position: relative;
@@ -759,11 +824,15 @@ VIDEO
 
     aspect-ratio: 16 / 9;
 
+    height: auto;
+
+    min-height: 0;
+
     background: #000;
 
-    border-radius: 10px;
-
     overflow: hidden;
+
+    border-radius: 10px;
 
     border:
         1px solid
@@ -774,17 +843,72 @@ VIDEO
         rgba(0,0,0,.6);
 }
 
-.video-container iframe {
-    width: 100%;
 
+
+/* =========================================================
+   VIDEO HTML5
+========================================================= */
+
+.video-container video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
     height: 100%;
 
-    border: none;
+    max-width: none;
+    max-height: none;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: #000;
+
+    object-fit: contain;
 }
 
-.player-placeholder {
-    width: 100%;
 
+
+/* =========================================================
+   IFRAME
+========================================================= */
+
+.video-container iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.player-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
     height: 100%;
 
     display: flex;
@@ -795,14 +919,25 @@ VIDEO
 
     justify-content: center;
 
+    padding: 20px;
+
     color: #888;
 
     text-align: center;
+
+    background: #000;
+
+    z-index: 2;
 }
+
+
+.video-container.playing .player-placeholder {
+    display: none;
+}
+
 
 .placeholder-icon {
     width: 70px;
-
     height: 70px;
 
     border-radius: 50%;
@@ -813,8 +948,7 @@ VIDEO
 
     justify-content: center;
 
-    background:
-        #e50914;
+    background: #e50914;
 
     color: white;
 
@@ -822,6 +956,7 @@ VIDEO
 
     margin-bottom: 15px;
 }
+
 
 .placeholder-label {
     font-size: 11px;
@@ -831,6 +966,7 @@ VIDEO
     color: #e50914;
 }
 
+
 .player-placeholder h3 {
     color: white;
 
@@ -838,14 +974,17 @@ VIDEO
         10px 0;
 }
 
+
 .player-placeholder p {
     color: #777;
+
+    margin: 0;
 }
 
 
 
 /* =========================================================
-ESTADO VIDEO
+   ESTADO VIDEO
 ========================================================= */
 
 .player-status-row {
@@ -855,12 +994,15 @@ ESTADO VIDEO
 
     align-items: center;
 
+    width: 100%;
+
     margin-top: 12px;
 
     color: #888;
 
     font-size: 13px;
 }
+
 
 .player-status {
     display: flex;
@@ -870,11 +1012,13 @@ ESTADO VIDEO
     gap: 8px;
 }
 
+
 .status-dot,
 .footer-status-dot {
     width: 8px;
-
     height: 8px;
+
+    flex-shrink: 0;
 
     border-radius: 50%;
 
@@ -882,6 +1026,7 @@ ESTADO VIDEO
 
     display: inline-block;
 }
+
 
 .player-current {
     color: #e50914;
@@ -892,7 +1037,7 @@ ESTADO VIDEO
 
 
 /* =========================================================
-ACCIONES INFERIORES
+   ACCIONES INFERIORES
 ========================================================= */
 
 .series-actions {
@@ -906,6 +1051,7 @@ ACCIONES INFERIORES
 
     margin-top: 30px;
 }
+
 
 .action-button {
     border:
@@ -925,7 +1071,11 @@ ACCIONES INFERIORES
     border-radius: 5px;
 
     cursor: pointer;
+
+    transition:
+        .2s ease;
 }
+
 
 .action-button:hover {
     background:
@@ -935,7 +1085,7 @@ ACCIONES INFERIORES
 
 
 /* =========================================================
-INFO
+   INFORMACION
 ========================================================= */
 
 .bottom-info {
@@ -956,6 +1106,7 @@ INFO
     background: #050505;
 }
 
+
 .info-card {
     display: flex;
 
@@ -975,9 +1126,11 @@ INFO
     border-radius: 8px;
 }
 
+
 .info-card-icon {
     min-width: 45px;
 
+    width: 45px;
     height: 45px;
 
     display: flex;
@@ -996,6 +1149,7 @@ INFO
     font-weight: bold;
 }
 
+
 .info-card-content {
     display: flex;
 
@@ -1004,6 +1158,7 @@ INFO
     gap: 5px;
 }
 
+
 .info-card-content strong {
     color: #eee;
 }
@@ -1011,7 +1166,7 @@ INFO
 
 
 /* =========================================================
-LATERAL
+   LATERAL
 ========================================================= */
 
 .episodes-side-label {
@@ -1032,12 +1187,14 @@ LATERAL
     letter-spacing: 5px;
 
     pointer-events: none;
+
+    z-index: 10;
 }
 
 
 
 /* =========================================================
-FOOTER
+   FOOTER
 ========================================================= */
 
 footer {
@@ -1046,6 +1203,7 @@ footer {
     padding:
         50px 8% 25px;
 }
+
 
 .footer-inner {
     display: grid;
@@ -1058,6 +1216,7 @@ footer {
     align-items: start;
 }
 
+
 .footer-logo {
     display: flex;
 
@@ -1066,9 +1225,9 @@ footer {
     gap: 10px;
 }
 
+
 .footer-logo-mark {
     width: 35px;
-
     height: 35px;
 
     display: flex;
@@ -1082,11 +1241,13 @@ footer {
     font-weight: bold;
 }
 
+
 .footer-logo-text {
     letter-spacing: 3px;
 
     font-weight: bold;
 }
+
 
 .footer-description {
     color: #666;
@@ -1096,6 +1257,7 @@ footer {
     line-height: 1.6;
 }
 
+
 .footer-links {
     display: flex;
 
@@ -1104,15 +1266,21 @@ footer {
     gap: 12px;
 }
 
+
 .footer-link {
     color: #999;
 
     text-decoration: none;
+
+    transition:
+        .2s ease;
 }
+
 
 .footer-link:hover {
     color: white;
 }
+
 
 .footer-status {
     display: flex;
@@ -1124,6 +1292,7 @@ footer {
     color: #888;
 }
 
+
 .footer-divider {
     height: 1px;
 
@@ -1133,6 +1302,7 @@ footer {
     margin:
         40px 0 20px;
 }
+
 
 .footer-bottom {
     display: flex;
@@ -1147,258 +1317,782 @@ footer {
 
 
 /* =========================================================
-RESPONSIVE
+   TABLETS / MOVILES
 ========================================================= */
 
-@media (
-    max-width: 768px
-) {
+@media (max-width: 768px) {
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero-section {
-        padding:
-            80px 25px
-            130px;
+        min-height: 700px;
 
-        min-height: 750px;
+        padding:
+            70px
+            25px
+            120px;
+
+        align-items: center;
+    }
+
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 100%;
     }
 
 
     .hero-red-line {
-        left: 12px;
+        left: 10px;
 
-        height: 180px;
+        top: 25%;
+
+        width: 3px;
+
+        height: 150px;
     }
 
 
+
+    /* =====================================================
+       MARCA
+    ===================================================== */
+
+    .serie-brand {
+        gap: 9px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+
+    .brand-name {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .original-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+
+    /* =====================================================
+       TITULO
+    ===================================================== */
+
     .serie-title {
-        font-size: 65px;
+        font-size:
+            clamp(
+                48px,
+                15vw,
+                70px
+            );
+
+        line-height: .88;
+
+        letter-spacing: -3px;
+
+        margin:
+            15px
+            0
+            18px;
+    }
+
+
+
+    /* =====================================================
+       META
+    ===================================================== */
+
+    .serie-meta {
+        gap: 7px;
+
+        margin-bottom: 18px;
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    .quality {
+        padding:
+            3px
+            6px;
+
+        font-size: 10px;
+    }
+
+
+
+    /* =====================================================
+       DESCRIPCION
+    ===================================================== */
+
+    .serie-description {
+        max-width: 100%;
     }
 
 
     .serie-description p {
-        font-size: 16px;
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        color: #c5c5c5;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 3;
+
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
     }
 
 
-    .episode-section {
-        padding:
-            60px 20px;
-    }
 
-
-    .episode-selectors {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .section-heading {
-        align-items: flex-start;
-
-        gap: 20px;
-    }
-
-
-    .section-title-row h2 {
-        font-size: 30px;
-    }
-
-
-    .bottom-info {
-        grid-template-columns:
-            1fr;
-
-        padding:
-            30px 20px;
-    }
-
-
-    .footer-inner {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-}
-
-
-
-@media (
-    max-width: 480px
-) {
-
-    .serie-title {
-        font-size: 52px;
-
-        letter-spacing: -3px;
-    }
-
-
-    .serie-meta {
-        font-size: 13px;
-    }
-
+    /* =====================================================
+       BOTONES HERO
+    ===================================================== */
 
     .hero-actions {
-        flex-direction: column;
+        display: grid;
 
-        align-items: stretch;
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
+
+        margin-top: 20px;
     }
 
 
     .hero-actions button,
     .hero-actions a {
         justify-content: center;
+
+        padding:
+            12px
+            10px;
+
+        font-size: 14px;
+
+        min-height: 44px;
     }
 
 
-    .controls-container {
-        flex-direction: column;
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .reaction-area {
+        margin-top: 20px;
     }
 
 
-    .episode-button {
-        justify-content: center;
+    .reaction-question {
+        font-size: 12px;
 
-        width: 100%;
+        margin-bottom: 7px;
     }
 
 
     .like-dislike-buttons {
-        flex-direction: column;
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
     }
 
 
     .reaction-button {
-        width: 100%;
+        padding:
+            9px
+            8px;
+
+        font-size: 12px;
     }
 
-}
+
+
+    /* =====================================================
+       FADE
+    ===================================================== */
+
+    .hero-bottom-fade {
+        height: 180px;
+    }
 
 
 
+    /* =====================================================
+       EPISODIOS
+    ===================================================== */
+
+    .episode-section {
+        padding:
+            45px
+            16px;
+    }
 
 
-```css
-/* =========================================================
-   FIX VIDEO — MANTENER DENTRO DEL MARCO
-========================================================= */
 
-.video-container {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    /* =====================================================
+       CABECERA
+    ===================================================== */
 
-    overflow: hidden;
+    .section-heading {
+        display: flex;
 
-    background: #000;
+        justify-content: space-between;
 
-    border-radius: 10px;
+        align-items: center;
 
-    border: 1px solid rgba(255,255,255,.1);
+        gap: 10px;
 
-    box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.6);
-}
+        margin-bottom: 20px;
+    }
 
 
-/* IFRAME DEL VIDEO */
+    .section-kicker {
+        font-size: 9px;
 
-.video-container iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border: none;
-
-    margin: 0;
-    padding: 0;
-}
+        letter-spacing: 2px;
+    }
 
 
-/* VIDEO HTML5 */
-
-.video-container video {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
-
-    margin: 0;
-    padding: 0;
-
-    border: none;
-
-    background: #000;
-}
+    .section-title-row {
+        gap: 10px;
+    }
 
 
-/* EVITA QUE ELEMENTOS INTERNOS MODIFIQUEN
-   EL TAMAÑO DEL MARCO */
+    .section-title-row h2 {
+        font-size: 25px;
 
-.video-container > * {
-    max-width: 100%;
-}
+        margin-top: 5px;
+    }
 
 
-/* =========================================================
-   MÓVIL
-========================================================= */
+    .heading-red-line {
+        width: 35px;
 
-@media (max-width: 768px) {
+        height: 2px;
+    }
 
-    .video-container {
+
+    .current-episode-badge {
+        padding:
+            7px
+            10px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 16px;
+
+        border-radius: 8px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .explorer-header h3 {
+        font-size: 19px;
+    }
+
+
+    .explorer-kicker {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .explorer-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .episode-selectors {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 16px;
+    }
+
+
+    .selector-box label {
+        font-size: 9px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .select-wrapper select {
+        padding: 11px;
+
+        font-size: 14px;
+    }
+
+
+
+    /* =====================================================
+       CONTROLES
+    ===================================================== */
+
+    .controls-container {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1.4fr
+            1fr;
+
+        gap: 6px;
+
+        margin:
+            20px
+            0;
+    }
+
+
+    .episode-button {
         width: 100%;
 
-        aspect-ratio: 16 / 9;
+        justify-content: center;
 
-        min-height: 0;
+        padding:
+            11px
+            5px;
+
+        font-size: 12px;
+
+        gap: 5px;
+    }
+
+
+
+    /* =====================================================
+       REPRODUCTOR MOVIL
+    ===================================================== */
+
+    .player-section {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .video-container {
+        position: relative;
+
+        width: 100%;
 
         height: auto;
 
-        margin: 0 auto;
+        min-height: 0;
 
-        border-radius: 8px;
+        aspect-ratio: 16 / 9;
+
+        border-radius: 7px;
+
+        overflow: hidden;
     }
 
-    .video-container iframe,
-    .video-container video {
+
+    .video-container video,
+    .video-container iframe {
         position: absolute;
 
         inset: 0;
 
         width: 100%;
         height: 100%;
+
+        max-width: none;
+        max-height: none;
+    }
+
+
+    .video-container video {
+        object-fit: contain;
+
+        background: #000;
+    }
+
+
+    .player-placeholder {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 15px;
+    }
+
+
+    .placeholder-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 20px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .placeholder-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .player-placeholder h3 {
+        font-size: 16px;
+
+        margin:
+            7px
+            0;
+    }
+
+
+    .player-placeholder p {
+        font-size: 12px;
+    }
+
+
+
+    /* =====================================================
+       ESTADO VIDEO
+    ===================================================== */
+
+    .player-status-row {
+        margin-top: 9px;
+
+        font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+
+    .action-button {
+        padding:
+            10px
+            8px;
+
+        font-size: 12px;
+
+        text-align: center;
+    }
+
+
+
+    /* =====================================================
+       INFORMACION
+    ===================================================== */
+
+    .bottom-info {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding:
+            20px
+            16px
+            40px;
+    }
+
+
+    .info-card {
+        padding: 13px;
+
+        gap: 12px;
+    }
+
+
+    .info-card-icon {
+        min-width: 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 10px;
+    }
+
+
+    .info-card-content {
+        gap: 3px;
+    }
+
+
+    .info-card-label {
+        font-size: 9px;
+    }
+
+
+    .info-card-content strong {
+        font-size: 13px;
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding:
+            35px
+            20px
+            20px;
+    }
+
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+
+    .footer-links {
+        gap: 9px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       LATERAL
+    ===================================================== */
+
+    .episodes-side-label {
+        display: none;
     }
 
 }
 
 
+
 /* =========================================================
-   TELÉFONOS PEQUEÑOS
+   TELEFONOS PEQUEÑOS
 ========================================================= */
 
 @media (max-width: 480px) {
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-section {
+        min-height: 650px;
+
+        padding:
+            60px
+            18px
+            100px;
+    }
+
+
+    .serie-title {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+
+        margin:
+            12px
+            0
+            15px;
+    }
+
+
+    .serie-meta {
+        gap: 5px;
+
+        font-size: 11px;
+    }
+
+
+    .serie-description p {
+        font-size: 13px;
+
+        -webkit-line-clamp: 2;
+    }
+
+
+
+    /* =====================================================
+       BOTONES
+    ===================================================== */
+
+    .hero-actions {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        margin-top: 17px;
+    }
+
+
+    .hero-actions button,
+    .hero-actions a {
+        font-size: 13px;
+
+        padding:
+            10px
+            6px;
+    }
+
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .reaction-button {
+        font-size: 11px;
+
+        padding:
+            8px
+            5px;
+    }
+
+
+
+    /* =====================================================
+       EPISODIOS
+    ===================================================== */
+
+    .episode-section {
+        padding:
+            35px
+            12px;
+    }
+
+
+    .section-title-row h2 {
+        font-size: 22px;
+    }
+
+
+    .current-episode-badge {
+        font-size: 10px;
+
+        padding:
+            6px
+            8px;
+    }
+
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 13px;
+    }
+
+
+    .explorer-header h3 {
+        font-size: 17px;
+    }
+
+
+
+    /* =====================================================
+       CONTROLES
+    ===================================================== */
+
+    .controls-container {
+        grid-template-columns:
+            .9fr
+            1.3fr
+            .9fr;
+
+        gap: 5px;
+    }
+
+
+    .episode-button {
+        font-size: 10px;
+
+        padding:
+            10px
+            3px;
+    }
+
+
+
+    /* =====================================================
+       VIDEO
+    ===================================================== */
 
     .video-container {
         width: 100%;
@@ -1406,286 +2100,37 @@ RESPONSIVE
         aspect-ratio: 16 / 9;
 
         border-radius: 6px;
+    }
+
+
+    .player-status-row {
+        font-size: 10px;
+    }
+
+
+
+    /* =====================================================
+       ACCIONES
+    ===================================================== */
+
+    .series-actions {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+
+
+    /* =====================================================
+       INFO
+    ===================================================== */
+
+    .bottom-info {
+        padding:
+            18px
+            12px
+            35px;
     }
 
 }
 ```
-
-
-
-
-/* =========================================================
-   VIDEO — REPRODUCTOR FIJO
-========================================================= */
-
-.player-section {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.video-container {
-    position: relative;
-
-    width: 100%;
-    aspect-ratio: 16 / 9;
-
-    background: #000;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,.1);
-
-    box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.6);
-}
-
-
-/* =========================================================
-   VIDEO INSERTADO POR JAVASCRIPT
-========================================================= */
-
-.video-container video {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
-
-    background: #000;
-
-    border: none;
-
-    margin: 0;
-    padding: 0;
-}
-
-
-/* =========================================================
-   IFRAME — POR SI USAS UNO
-========================================================= */
-
-.video-container iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border: none;
-
-    margin: 0;
-    padding: 0;
-}
-
-
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
-
-.player-placeholder {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #888;
-
-    text-align: center;
-
-    background: #000;
-
-    z-index: 2;
-}
-
-
-/* Cuando el video está activo,
-   el placeholder puede desaparecer */
-
-.video-container.playing .player-placeholder {
-    display: none;
-}
-
-
-/* =========================================================
-   ICONO PLACEHOLDER
-========================================================= */
-
-.placeholder-icon {
-    width: 70px;
-    height: 70px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: #e50914;
-
-    color: white;
-
-    font-size: 25px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================================================
-   TEXTO PLACEHOLDER
-========================================================= */
-
-.placeholder-label {
-    font-size: 11px;
-
-    letter-spacing: 4px;
-
-    color: #e50914;
-}
-
-.player-placeholder h3 {
-    color: white;
-
-    margin: 10px 0;
-}
-
-.player-placeholder p {
-    color: #777;
-
-    margin: 0;
-}
-
-
-/* =========================================================
-   ESTADO DEBAJO DEL VIDEO
-========================================================= */
-
-.player-status-row {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    width: 100%;
-
-    margin-top: 12px;
-
-    color: #888;
-
-    font-size: 13px;
-}
-
-.player-status {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-}
-
-.status-dot,
-.footer-status-dot {
-    width: 8px;
-    height: 8px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    background: #22c55e;
-
-    display: inline-block;
-}
-
-.player-current {
-    color: #e50914;
-
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   IMPORTANTE:
-   EVITA QUE EL VIDEO CAMBIE EL ALTO DEL CONTENEDOR
-========================================================= */
-
-.video-container > video,
-.video-container > iframe {
-    max-width: none;
-    max-height: none;
-}
-
-
-/* =========================================================
-   MÓVIL
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .player-section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .video-container {
-        width: 100%;
-
-        aspect-ratio: 16 / 9;
-
-        border-radius: 8px;
-    }
-
-    .video-container video,
-    .video-container iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    .player-status-row {
-        font-size: 12px;
-    }
-}
-
-
-/* =========================================================
-   CELULARES PEQUEÑOS
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .video-container {
-        width: 100%;
-
-        aspect-ratio: 16 / 9;
-
-        border-radius: 6px;
-    }
-
-    .player-status-row {
-        margin-top: 10px;
-    }
-}
