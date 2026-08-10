@@ -1828,3 +1828,257 @@ footer {
 
 }
 
+
+
+
+
+
+/* =========================================================
+RESPONSIVE MÓVIL PEQUEÑO
+SOLO AJUSTE DE ESPACIO EN BOTONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        min-height: 750px;
+
+        padding:
+            70px 20px
+            120px;
+    }
+
+
+    .hero-red-line {
+        left: 8px;
+
+        width: 3px;
+
+        height: 150px;
+    }
+
+
+    .serie-brand {
+        margin-bottom: 20px;
+    }
+
+
+    .brand-mark {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 21px;
+    }
+
+
+    .brand-name {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .original-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .serie-title {
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .serie-meta {
+        font-size: 13px;
+
+        gap: 8px;
+    }
+
+
+    .serie-description p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       BOTONES HERO — MÁS COMPACTOS EN CELULAR
+       ===================================================== */
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+
+    .hero-actions button,
+    .hero-actions a {
+        justify-content: center;
+
+        width: 100%;
+
+        padding:
+            10px 16px;
+
+        min-height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       REACCIONES — MÁS COMPACTAS
+       ===================================================== */
+
+    .reaction-area {
+        margin-top: 20px;
+    }
+
+
+    .like-dislike-buttons {
+        flex-direction: row;
+
+        gap: 8px;
+    }
+
+
+    .reaction-button {
+        width: auto;
+
+        flex: 1;
+
+        padding:
+            8px 12px;
+
+        min-height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       CONTROLES DE EPISODIOS — MÁS COMPACTOS
+       ===================================================== */
+
+    .controls-container {
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin:
+            20px 0;
+    }
+
+
+    .episode-button {
+        justify-content: center;
+
+        width: 100%;
+
+        padding:
+            10px 16px;
+
+        min-height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .section-title-row {
+        gap: 10px;
+    }
+
+
+    .section-title-row h2 {
+        font-size: 27px;
+    }
+
+
+    .heading-red-line {
+        width: 45px;
+    }
+
+
+    .current-episode-badge {
+        font-size: 13px;
+
+        padding:
+            7px 12px;
+    }
+
+
+    .episode-explorer {
+        padding: 18px;
+    }
+
+
+    .explorer-header h3 {
+        font-size: 21px;
+    }
+
+
+    .video-container {
+        border-radius: 6px;
+    }
+
+
+    .player-status-row {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       ACCIONES INFERIORES — MÁS COMPACTAS
+       ===================================================== */
+
+    .series-actions {
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+
+    .action-button {
+        width: 100%;
+
+        text-align: center;
+
+        padding:
+            9px 16px;
+
+        min-height: 40px;
+
+        font-size: 14px;
+    }
+
+
+    .episodes-side-label {
+        display: none;
+    }
+
+
+    footer {
+        padding:
+            40px 20px 20px;
+    }
+}
