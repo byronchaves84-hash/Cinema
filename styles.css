@@ -1640,5 +1640,104 @@ footer p {
 ```
 
 
+
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}
+
+/* =========================================================
+   MÓVIL — 3 PELÍCULAS POR FILA
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .anime-gallery {
+        gap: 10px;
+    }
+
+    .anime-item {
+        flex: 0 1 calc(33.333% - 10px);
+        min-width: 0;
+        max-width: none;
+    }
+
+}
+
+
+/* =========================================================
+   CARRUSELES TÁCTILES EN MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .carousel-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-behavior: smooth;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+
+        cursor: grab;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-container:active {
+        cursor: grabbing;
+    }
+
+    .carousel-images {
+        width: max-content;
+        transform: none !important;
+        transition: none;
+
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Ocultar flechas en celular */
+    .carousel-button {
+        display: none !important;
+    }
+
+    /* Evita que las tarjetas se reduzcan */
+    .series-card {
+        flex: 0 0 175px;
+    }
+
+    .horror-card {
+        flex: 0 0 185px;
+    }
+}
+
+   
+
 }
 
