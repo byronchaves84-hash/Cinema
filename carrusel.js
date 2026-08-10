@@ -1,39 +1,153 @@
-// Variables para controlar el carrusel
-let currentIndex = 0;  // Índice de la imagen actual
-const images = document.querySelectorAll('.carousel-images .anime-item');  // Seleccionamos todos los elementos del carrusel
-const totalImages = images.length;  // Total de elementos en el carrusel
+// =========================================================
+// CARRUSEL CINEMAX — PC + MÓVIL TÁCTIL
+// =========================================================
 
-// Ancho de cada item + margen (ancho: 280px, margen: 15px)
-const itemWidth = 280 + 15;  // 280px de ancho + 15px de margen
+const carousel = document.querySelector('.carousel-container');
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images .anime-item');
 
-// Función para cambiar la imagen mostrada
+let currentIndex = 0;
+const totalImages = images.length;
+
+
+// =========================================================
+// CAMBIAR IMAGEN — ESCRITORIO
+// =========================================================
+
 function changeImage() {
-    // Calculamos el desplazamiento
-    const offset = -currentIndex * itemWidth;  // Desplazamos el contenedor de acuerdo al índice y al tamaño total del item
-    // Aplicamos el desplazamiento al contenedor de imágenes
-    document.querySelector('.carousel-images').style.transform = `translateX(${offset}px)`;
+
+    // En móvil no usamos transform
+    if (window.innerWidth <= 600) {
+        return;
+    }
+
+    const itemWidth = 280 + 15;
+
+    const offset = -currentIndex * itemWidth;
+
+    carouselImages.style.transform =
+        `translateX(${offset}px)`;
 }
 
-// Función para mover al siguiente
+
+// =========================================================
+// SIGUIENTE
+// =========================================================
+
 function nextImage() {
-    // Incrementamos el índice y lo volvemos a cero si llegamos al final
-    currentIndex = (currentIndex + 1) % totalImages;
+
+    currentIndex++;
+
+    if (currentIndex >= totalImages) {
+        currentIndex = 0;
+    }
+
     changeImage();
 }
 
-// Función para mover a la imagen anterior
+
+// =========================================================
+// ANTERIOR
+// =========================================================
+
 function prevImage() {
-    // Decrementamos el índice y lo volvemos al final si llegamos al principio
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = totalImages - 1;
+    }
+
     changeImage();
 }
 
-// Añadir eventos a los botones
-document.querySelector('.next').addEventListener('click', nextImage);
-document.querySelector('.prev').addEventListener('click', prevImage);
+
+// =========================================================
+// BOTONES
+// =========================================================
+
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+
+if (nextButton) {
+    nextButton.addEventListener('click', nextImage);
+}
+
+if (prevButton) {
+    prevButton.addEventListener('click', prevImage);
+}
 
 
+// =========================================================
+// MÓVIL — DESLIZAMIENTO TÁCTIL
+// =========================================================
 
+if (carousel) {
+
+    let startX = 0;
+    let startY = 0;
+
+    carousel.addEventListener(
+        'touchstart',
+        function (e) {
+
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+
+        },
+        { passive: true }
+    );
+
+
+    carousel.addEventListener(
+        'touchend',
+        function (e) {
+
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+
+            const differenceX = startX - endX;
+            const differenceY = startY - endY;
+
+            // Solo detectamos deslizamientos horizontales
+            if (Math.abs(differenceX) > Math.abs(differenceY)) {
+
+                // Deslizar hacia la izquierda
+                if (differenceX > 50) {
+                    nextImage();
+                }
+
+                // Deslizar hacia la derecha
+                if (differenceX < -50) {
+                    prevImage();
+                }
+
+            }
+
+        },
+        { passive: true }
+    );
+}
+
+
+// =========================================================
+// AL CAMBIAR ENTRE PC Y MÓVIL
+// =========================================================
+
+window.addEventListener('resize', function () {
+
+    if (window.innerWidth > 600) {
+
+        changeImage();
+
+    } else {
+
+        // En móvil eliminamos el desplazamiento por transform
+        carouselImages.style.transform = 'none';
+
+    }
+
+});
 
 
 
