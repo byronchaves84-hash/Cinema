@@ -1,6 +1,6 @@
 
 /* =========================================================
-   RESET
+RESET
 ========================================================= */
 
 * {
@@ -9,11 +9,9 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family:
@@ -28,12 +26,13 @@ body {
     min-height: 100vh;
 
     overflow-x: hidden;
+
+    position: relative;
 }
 
 
-
 /* =========================================================
-   TRAILER
+TRAILER
 ========================================================= */
 
 .video-trailer {
@@ -43,14 +42,16 @@ body {
 
     width: 100%;
     height: 100vh;
+    height: 100dvh;
 
-    z-index: 0;
+    z-index: -2;
 
     overflow: hidden;
 
     background: #050505;
-}
 
+    pointer-events: none;
+}
 
 .video-trailer video {
     position: absolute;
@@ -64,48 +65,66 @@ body {
 
     display: block;
 
-    z-index: 0;
+    z-index: -2;
+
+    pointer-events: none;
 }
 
 
-.trailer-overlay {
+/* =========================================================
+OVERLAY DEL VIDEO
+========================================================= */
+
+.background-overlay {
     position: absolute;
 
     inset: 0;
 
+    width: 100%;
+    height: 100%;
+
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.95),
-            rgba(0,0,0,.50),
-            rgba(0,0,0,.20)
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.30)
         );
 
-    z-index: 1;
+    z-index: -1;
+
+    pointer-events: none;
 }
 
+
+/* =========================================================
+VIÑETA
+========================================================= */
 
 .trailer-vignette {
     position: absolute;
 
     inset: 0;
 
+    width: 100%;
+    height: 100%;
+
     background:
         radial-gradient(
             ellipse at center,
-            transparent 20%,
-            rgba(0,0,0,.85) 100%
+            transparent 15%,
+            rgba(0,0,0,.45) 60%,
+            rgba(0,0,0,.90) 100%
         );
 
-    z-index: 2;
+    z-index: -1;
 
     pointer-events: none;
 }
 
 
-
 /* =========================================================
-   FONDO VIDEO EPISODIO
+FONDO VIDEO EPISODIO
 ========================================================= */
 
 .video-background {
@@ -118,14 +137,12 @@ body {
     display: none;
 }
 
-
 .video-background video {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 }
-
 
 .background-overlay {
     position: absolute;
@@ -137,9 +154,8 @@ body {
 }
 
 
-
 /* =========================================================
-   CONTENEDOR
+CONTENEDOR
 ========================================================= */
 
 .serie-container {
@@ -153,9 +169,8 @@ body {
 }
 
 
-
 /* =========================================================
-   HERO
+HERO
 ========================================================= */
 
 .hero-section {
@@ -171,8 +186,9 @@ body {
         100px
         8%
         180px;
-}
 
+    background: transparent;
+}
 
 .hero-red-line {
     position: absolute;
@@ -192,13 +208,11 @@ body {
         rgba(229,9,20,.6);
 }
 
-
 .hero-content {
     width: 100%;
 
     max-width: 750px;
 }
-
 
 .serie-brand {
     display: flex;
@@ -209,7 +223,6 @@ body {
 
     margin-bottom: 30px;
 }
-
 
 .brand-mark {
     width: 42px;
@@ -227,7 +240,6 @@ body {
     font-weight: 900;
 }
 
-
 .brand-name {
     font-weight: 900;
 
@@ -235,7 +247,6 @@ body {
 
     font-size: 18px;
 }
-
 
 .original-label {
     display: flex;
@@ -251,7 +262,6 @@ body {
     color: #aaa;
 }
 
-
 .original-line {
     width: 35px;
 
@@ -261,9 +271,8 @@ body {
 }
 
 
-
 /* =========================================================
-   TITULO
+TITULO
 ========================================================= */
 
 .serie-title {
@@ -293,15 +302,13 @@ body {
         rgba(0,0,0,.8);
 }
 
-
 .serie-title span:last-child {
     color: #e50914;
 }
 
 
-
 /* =========================================================
-   META
+META
 ========================================================= */
 
 .serie-meta {
@@ -318,7 +325,6 @@ body {
     margin-bottom: 25px;
 }
 
-
 .quality {
     border:
         1px solid
@@ -332,21 +338,18 @@ body {
     font-weight: bold;
 }
 
-
 .dot {
     color: #777;
 }
 
 
-
 /* =========================================================
-   DESCRIPCION
+DESCRIPCION
 ========================================================= */
 
 .serie-description {
     max-width: 650px;
 }
-
 
 .serie-description p {
     color: #d1d1d1;
@@ -357,9 +360,8 @@ body {
 }
 
 
-
 /* =========================================================
-   ACCIONES HERO
+ACCIONES HERO
 ========================================================= */
 
 .hero-actions {
@@ -371,7 +373,6 @@ body {
 
     margin-top: 30px;
 }
-
 
 .hero-actions button,
 .hero-actions a {
@@ -403,20 +404,17 @@ body {
         .2s ease;
 }
 
-
 .hero-play-button {
     background: #ffffff;
 
     color: #000000;
 }
 
-
 .hero-play-button:hover {
     background: #dddddd;
 
     transform: scale(1.03);
 }
-
 
 .hero-info-button {
     background:
@@ -425,22 +423,19 @@ body {
     color: white;
 }
 
-
 .hero-info-button:hover {
     background:
         rgba(100,100,100,.9);
 }
 
 
-
 /* =========================================================
-   REACCIONES
+REACCIONES
 ========================================================= */
 
 .reaction-area {
     margin-top: 30px;
 }
-
 
 .reaction-question {
     display: block;
@@ -450,13 +445,11 @@ body {
     margin-bottom: 10px;
 }
 
-
 .like-dislike-buttons {
     display: flex;
 
     gap: 10px;
 }
-
 
 .reaction-button {
     background:
@@ -480,7 +473,6 @@ body {
         .2s ease;
 }
 
-
 .reaction-button:hover,
 .reaction-button.selected {
     border-color: #e50914;
@@ -490,9 +482,8 @@ body {
 }
 
 
-
 /* =========================================================
-   FADE HERO
+FADE HERO
 ========================================================= */
 
 .hero-bottom-fade {
@@ -516,9 +507,8 @@ body {
 }
 
 
-
 /* =========================================================
-   EPISODIOS
+EPISODIOS
 ========================================================= */
 
 .episode-section {
@@ -534,7 +524,6 @@ body {
         );
 }
 
-
 .section-heading {
     display: flex;
 
@@ -544,7 +533,6 @@ body {
 
     margin-bottom: 35px;
 }
-
 
 .section-kicker,
 .explorer-kicker,
@@ -560,7 +548,6 @@ body {
     font-weight: bold;
 }
 
-
 .section-title-row {
     display: flex;
 
@@ -569,13 +556,11 @@ body {
     gap: 20px;
 }
 
-
 .section-title-row h2 {
     font-size: 38px;
 
     margin-top: 8px;
 }
-
 
 .heading-red-line {
     width: 80px;
@@ -584,7 +569,6 @@ body {
 
     background: #e50914;
 }
-
 
 .current-episode-badge {
     background: #e50914;
@@ -596,9 +580,8 @@ body {
 }
 
 
-
 /* =========================================================
-   EXPLORADOR
+EXPLORADOR
 ========================================================= */
 
 .episode-explorer {
@@ -616,7 +599,6 @@ body {
     margin-bottom: 25px;
 }
 
-
 .explorer-header {
     display: flex;
 
@@ -625,13 +607,11 @@ body {
     align-items: center;
 }
 
-
 .explorer-header h3 {
     font-size: 25px;
 
     margin-top: 5px;
 }
-
 
 .explorer-toggle {
     border: none;
@@ -649,7 +629,6 @@ body {
     cursor: pointer;
 }
 
-
 .episode-selectors {
     display: grid;
 
@@ -664,11 +643,9 @@ body {
     margin-top: 25px;
 }
 
-
 .episode-selectors.collapsed {
     display: none;
 }
-
 
 .selector-box label {
     display: block;
@@ -682,11 +659,9 @@ body {
     margin-bottom: 8px;
 }
 
-
 .select-wrapper {
     position: relative;
 }
-
 
 .select-wrapper select {
     width: 100%;
@@ -713,11 +688,9 @@ body {
     outline: none;
 }
 
-
 .select-wrapper select:focus {
     border-color: #e50914;
 }
-
 
 .select-arrow {
     position: absolute;
@@ -733,9 +706,8 @@ body {
 }
 
 
-
 /* =========================================================
-   CONTROLES
+CONTROLES
 ========================================================= */
 
 .controls-container {
@@ -750,7 +722,6 @@ body {
     margin:
         30px 0;
 }
-
 
 .episode-button {
     border: none;
@@ -779,22 +750,18 @@ body {
         .2s ease;
 }
 
-
 .episode-button.primary {
     background: #e50914;
 }
-
 
 .episode-button.primary:hover {
     background: #b20710;
 }
 
-
 .episode-button.secondary {
     background:
         #242424;
 }
-
 
 .episode-button.secondary:hover {
     background:
@@ -802,10 +769,9 @@ body {
 }
 
 
-
 /* =========================================================
-   REPRODUCTOR
-   IMPORTANTE: UNA SOLA VERSION
+REPRODUCTOR
+IMPORTANTE: UNA SOLA VERSION
 ========================================================= */
 
 .player-section {
@@ -815,7 +781,6 @@ body {
 
     margin: 0 auto;
 }
-
 
 .video-container {
     position: relative;
@@ -844,9 +809,8 @@ body {
 }
 
 
-
 /* =========================================================
-   VIDEO HTML5
+VIDEO HTML5
 ========================================================= */
 
 .video-container video {
@@ -873,9 +837,8 @@ body {
 }
 
 
-
 /* =========================================================
-   IFRAME
+IFRAME
 ========================================================= */
 
 .video-container iframe {
@@ -898,9 +861,8 @@ body {
 }
 
 
-
 /* =========================================================
-   PLACEHOLDER
+PLACEHOLDER
 ========================================================= */
 
 .player-placeholder {
@@ -930,11 +892,9 @@ body {
     z-index: 2;
 }
 
-
 .video-container.playing .player-placeholder {
     display: none;
 }
-
 
 .placeholder-icon {
     width: 70px;
@@ -957,7 +917,6 @@ body {
     margin-bottom: 15px;
 }
 
-
 .placeholder-label {
     font-size: 11px;
 
@@ -966,14 +925,12 @@ body {
     color: #e50914;
 }
 
-
 .player-placeholder h3 {
     color: white;
 
     margin:
         10px 0;
 }
-
 
 .player-placeholder p {
     color: #777;
@@ -982,9 +939,8 @@ body {
 }
 
 
-
 /* =========================================================
-   ESTADO VIDEO
+ESTADO VIDEO
 ========================================================= */
 
 .player-status-row {
@@ -1003,7 +959,6 @@ body {
     font-size: 13px;
 }
 
-
 .player-status {
     display: flex;
 
@@ -1011,7 +966,6 @@ body {
 
     gap: 8px;
 }
-
 
 .status-dot,
 .footer-status-dot {
@@ -1027,7 +981,6 @@ body {
     display: inline-block;
 }
 
-
 .player-current {
     color: #e50914;
 
@@ -1035,9 +988,8 @@ body {
 }
 
 
-
 /* =========================================================
-   ACCIONES INFERIORES
+ACCIONES INFERIORES
 ========================================================= */
 
 .series-actions {
@@ -1051,7 +1003,6 @@ body {
 
     margin-top: 30px;
 }
-
 
 .action-button {
     border:
@@ -1076,16 +1027,14 @@ body {
         .2s ease;
 }
 
-
 .action-button:hover {
     background:
         #242424;
 }
 
 
-
 /* =========================================================
-   INFORMACION
+INFORMACION
 ========================================================= */
 
 .bottom-info {
@@ -1106,7 +1055,6 @@ body {
     background: #050505;
 }
 
-
 .info-card {
     display: flex;
 
@@ -1125,7 +1073,6 @@ body {
 
     border-radius: 8px;
 }
-
 
 .info-card-icon {
     min-width: 45px;
@@ -1149,7 +1096,6 @@ body {
     font-weight: bold;
 }
 
-
 .info-card-content {
     display: flex;
 
@@ -1158,15 +1104,13 @@ body {
     gap: 5px;
 }
 
-
 .info-card-content strong {
     color: #eee;
 }
 
 
-
 /* =========================================================
-   LATERAL
+LATERAL
 ========================================================= */
 
 .episodes-side-label {
@@ -1192,9 +1136,8 @@ body {
 }
 
 
-
 /* =========================================================
-   FOOTER
+FOOTER
 ========================================================= */
 
 footer {
@@ -1203,7 +1146,6 @@ footer {
     padding:
         50px 8% 25px;
 }
-
 
 .footer-inner {
     display: grid;
@@ -1216,7 +1158,6 @@ footer {
     align-items: start;
 }
 
-
 .footer-logo {
     display: flex;
 
@@ -1224,7 +1165,6 @@ footer {
 
     gap: 10px;
 }
-
 
 .footer-logo-mark {
     width: 35px;
@@ -1241,13 +1181,11 @@ footer {
     font-weight: bold;
 }
 
-
 .footer-logo-text {
     letter-spacing: 3px;
 
     font-weight: bold;
 }
-
 
 .footer-description {
     color: #666;
@@ -1257,7 +1195,6 @@ footer {
     line-height: 1.6;
 }
 
-
 .footer-links {
     display: flex;
 
@@ -1265,7 +1202,6 @@ footer {
 
     gap: 12px;
 }
-
 
 .footer-link {
     color: #999;
@@ -1276,11 +1212,9 @@ footer {
         .2s ease;
 }
 
-
 .footer-link:hover {
     color: white;
 }
-
 
 .footer-status {
     display: flex;
@@ -1292,7 +1226,6 @@ footer {
     color: #888;
 }
 
-
 .footer-divider {
     height: 1px;
 
@@ -1302,7 +1235,6 @@ footer {
     margin:
         40px 0 20px;
 }
-
 
 .footer-bottom {
     display: flex;
@@ -1315,17 +1247,11 @@ footer {
 }
 
 
-
 /* =========================================================
-   TABLETS / MOVILES
+TABLETS / MOVILES
 ========================================================= */
 
 @media (max-width: 768px) {
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero-section {
         min-height: 700px;
@@ -1357,11 +1283,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       MARCA
-    ===================================================== */
-
     .serie-brand {
         gap: 9px;
 
@@ -1391,11 +1312,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       TITULO
-    ===================================================== */
-
     .serie-title {
         font-size:
             clamp(
@@ -1414,11 +1330,6 @@ footer {
             18px;
     }
 
-
-
-    /* =====================================================
-       META
-    ===================================================== */
 
     .serie-meta {
         gap: 7px;
@@ -1439,11 +1350,6 @@ footer {
         font-size: 10px;
     }
 
-
-
-    /* =====================================================
-       DESCRIPCION
-    ===================================================== */
 
     .serie-description {
         max-width: 100%;
@@ -1466,11 +1372,6 @@ footer {
         overflow: hidden;
     }
 
-
-
-    /* =====================================================
-       BOTONES HERO
-    ===================================================== */
 
     .hero-actions {
         display: grid;
@@ -1498,11 +1399,6 @@ footer {
         min-height: 44px;
     }
 
-
-
-    /* =====================================================
-       REACCIONES
-    ===================================================== */
 
     .reaction-area {
         margin-top: 20px;
@@ -1536,20 +1432,10 @@ footer {
     }
 
 
-
-    /* =====================================================
-       FADE
-    ===================================================== */
-
     .hero-bottom-fade {
         height: 180px;
     }
 
-
-
-    /* =====================================================
-       EPISODIOS
-    ===================================================== */
 
     .episode-section {
         padding:
@@ -1557,11 +1443,6 @@ footer {
             16px;
     }
 
-
-
-    /* =====================================================
-       CABECERA
-    ===================================================== */
 
     .section-heading {
         display: flex;
@@ -1613,11 +1494,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       EXPLORADOR
-    ===================================================== */
-
     .episode-explorer {
         padding: 16px;
 
@@ -1668,11 +1544,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       CONTROLES
-    ===================================================== */
-
     .controls-container {
         display: grid;
 
@@ -1703,11 +1574,6 @@ footer {
         gap: 5px;
     }
 
-
-
-    /* =====================================================
-       REPRODUCTOR MOVIL
-    ===================================================== */
 
     .player-section {
         width: 100%;
@@ -1797,22 +1663,12 @@ footer {
     }
 
 
-
-    /* =====================================================
-       ESTADO VIDEO
-    ===================================================== */
-
     .player-status-row {
         margin-top: 9px;
 
         font-size: 11px;
     }
 
-
-
-    /* =====================================================
-       ACCIONES INFERIORES
-    ===================================================== */
 
     .series-actions {
         display: grid;
@@ -1837,11 +1693,6 @@ footer {
         text-align: center;
     }
 
-
-
-    /* =====================================================
-       INFORMACION
-    ===================================================== */
 
     .bottom-info {
         grid-template-columns: 1fr;
@@ -1887,11 +1738,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
     footer {
         padding:
             35px
@@ -1926,29 +1772,146 @@ footer {
     }
 
 
-
-    /* =====================================================
-       LATERAL
-    ===================================================== */
-
     .episodes-side-label {
         display: none;
     }
 
-}
 
+    /* =====================================================
+       VIDEO DE FONDO EN MOVIL
+       SOLO ASEGURA QUE OCUPE TODA LA PANTALLA
+    ===================================================== */
 
+    .video-trailer {
+        height: 100vh;
+        height: 100dvh;
+    }
 
-/* =========================================================
-   TELEFONOS PEQUEÑOS
-========================================================= */
+    .video-trailer video {
+        width: 100%;
+        height: 100%;
 
-@media (max-width: 480px) {
+        object-fit: cover;
+    }
+
+    .background-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,.72),
+                rgba(0,0,0,.48),
+                rgba(0,0,0,.82)
+            );
+    }
+
+    .trailer-vignette {
+        background:
+            radial-gradient(
+                ellipse at center,
+                transparent 10%,
+                rgba(0,0,0,.72) 100%
+            );
+    }
 
 
     /* =====================================================
-       HERO
+       BOTONES EN CELULAR
     ===================================================== */
+
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 7px;
+        white-space: nowrap;
+        min-height: 42px;
+    }
+
+    .hero-play-button {
+        flex: 0 0 auto;
+    }
+
+    .hero-info-button {
+        flex: 0 0 auto;
+    }
+
+
+    /* =====================================================
+       BOTONES DE EPISODIOS
+    ===================================================== */
+
+    .controls-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 7px;
+        margin: 20px 0;
+    }
+
+    .episode-button {
+        padding: 10px 12px;
+        font-size: 13px;
+        gap: 6px;
+        min-height: 40px;
+    }
+
+    .episode-button.secondary {
+        flex: 0 0 auto;
+    }
+
+    .episode-button.primary {
+        flex: 1;
+    }
+
+
+    /* =====================================================
+       BOTONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        padding: 9px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .reaction-button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+TELEFONOS PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
 
     .hero-section {
         min-height: 650px;
@@ -1986,11 +1949,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       BOTONES
-    ===================================================== */
-
     .hero-actions {
         grid-template-columns:
             1fr
@@ -2010,11 +1968,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       REACCIONES
-    ===================================================== */
-
     .reaction-button {
         font-size: 11px;
 
@@ -2023,11 +1976,6 @@ footer {
             5px;
     }
 
-
-
-    /* =====================================================
-       EPISODIOS
-    ===================================================== */
 
     .episode-section {
         padding:
@@ -2050,11 +1998,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       EXPLORADOR
-    ===================================================== */
-
     .episode-explorer {
         padding: 13px;
     }
@@ -2064,11 +2007,6 @@ footer {
         font-size: 17px;
     }
 
-
-
-    /* =====================================================
-       CONTROLES
-    ===================================================== */
 
     .controls-container {
         grid-template-columns:
@@ -2089,11 +2027,6 @@ footer {
     }
 
 
-
-    /* =====================================================
-       VIDEO
-    ===================================================== */
-
     .video-container {
         width: 100%;
 
@@ -2108,22 +2041,12 @@ footer {
     }
 
 
-
-    /* =====================================================
-       ACCIONES
-    ===================================================== */
-
     .series-actions {
         grid-template-columns: 1fr;
 
         gap: 7px;
     }
 
-
-
-    /* =====================================================
-       INFO
-    ===================================================== */
 
     .bottom-info {
         padding:
@@ -2132,14 +2055,154 @@ footer {
             35px;
     }
 
+
+    /* =====================================================
+       HERO: BOTONES MÁS PEQUEÑOS
+    ===================================================== */
+
+    .hero-actions {
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 9px 11px;
+        font-size: 12px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .play-symbol,
+    .info-symbol {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       CONTROLES: ANTERIOR / INICIAR / SIGUIENTE
+    ===================================================== */
+
+    .controls-container {
+        gap: 5px;
+        margin: 18px 0;
+    }
+
+    .episode-button {
+        padding: 9px 9px;
+        font-size: 11px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .episode-button.primary {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .button-icon {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        gap: 6px;
+    }
+
+    .action-button {
+        padding: 8px 9px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        gap: 6px;
+    }
+
+    .reaction-button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 17px;
+    }
+
+    .explorer-header h3 {
+        font-size: 20px;
+    }
+
+    .episode-selectors {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       TITULOS
+    ===================================================== */
+
+    .section-title-row {
+        gap: 10px;
+    }
+
+    .section-title-row h2 {
+        font-size: 25px;
+    }
+
+    .heading-red-line {
+        width: 45px;
+    }
+
+    .current-episode-badge {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding: 35px 18px 20px;
+    }
+
+
+    /* =====================================================
+       VIDEO DE FONDO EN TELEFONOS PEQUEÑOS
+    ===================================================== */
+
+    .video-trailer {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    .video-trailer video {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
 }
-```
 
 
-
-```css
 /* =========================================================
-   RESPONSIVE
+RESPONSIVE
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -2287,7 +2350,7 @@ footer {
 
 
 /* =========================================================
-   CELULARES PEQUEÑOS
+CELULARES PEQUEÑOS
 ========================================================= */
 
 @media (max-width: 480px) {
