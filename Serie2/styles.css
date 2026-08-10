@@ -2134,3 +2134,310 @@ footer {
 
 }
 ```
+
+
+
+```css
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 80px 25px 130px;
+        min-height: 750px;
+    }
+
+    .hero-red-line {
+        left: 12px;
+        height: 180px;
+    }
+
+    .serie-title {
+        font-size: 65px;
+    }
+
+    .serie-description p {
+        font-size: 16px;
+    }
+
+    .episode-section {
+        padding: 60px 20px;
+    }
+
+    .episode-selectors {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section-title-row h2 {
+        font-size: 30px;
+    }
+
+    .bottom-info {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* =====================================================
+       BOTONES EN CELULAR
+    ===================================================== */
+
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 7px;
+        white-space: nowrap;
+        min-height: 42px;
+    }
+
+    .hero-play-button {
+        flex: 0 0 auto;
+    }
+
+    .hero-info-button {
+        flex: 0 0 auto;
+    }
+
+
+    /* =====================================================
+       BOTONES DE EPISODIOS
+    ===================================================== */
+
+    .controls-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 7px;
+        margin: 20px 0;
+    }
+
+    .episode-button {
+        padding: 10px 12px;
+        font-size: 13px;
+        gap: 6px;
+        min-height: 40px;
+    }
+
+    .episode-button.secondary {
+        flex: 0 0 auto;
+    }
+
+    .episode-button.primary {
+        flex: 1;
+    }
+
+
+    /* =====================================================
+       BOTONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        padding: 9px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .reaction-button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding:
+            70px 18px
+            110px;
+    }
+
+    .serie-title {
+        font-size: 50px;
+        letter-spacing: -3px;
+    }
+
+    .serie-meta {
+        font-size: 12px;
+        gap: 7px;
+    }
+
+    .serie-description p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       HERO: BOTONES MÁS PEQUEÑOS
+    ===================================================== */
+
+    .hero-actions {
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .hero-actions button,
+    .hero-actions a {
+        padding: 9px 11px;
+        font-size: 12px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .play-symbol,
+    .info-symbol {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       CONTROLES: ANTERIOR / INICIAR / SIGUIENTE
+    ===================================================== */
+
+    .controls-container {
+        gap: 5px;
+        margin: 18px 0;
+    }
+
+    .episode-button {
+        padding: 9px 9px;
+        font-size: 11px;
+        min-height: 38px;
+        border-radius: 4px;
+    }
+
+    .episode-button.primary {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .button-icon {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ACCIONES INFERIORES
+    ===================================================== */
+
+    .series-actions {
+        gap: 6px;
+    }
+
+    .action-button {
+        padding: 8px 9px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+
+    /* =====================================================
+       REACCIONES
+    ===================================================== */
+
+    .like-dislike-buttons {
+        gap: 6px;
+    }
+
+    .reaction-button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       EXPLORADOR
+    ===================================================== */
+
+    .episode-explorer {
+        padding: 17px;
+    }
+
+    .explorer-header h3 {
+        font-size: 20px;
+    }
+
+    .episode-selectors {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       TITULOS
+    ===================================================== */
+
+    .section-title-row {
+        gap: 10px;
+    }
+
+    .section-title-row h2 {
+        font-size: 25px;
+    }
+
+    .heading-red-line {
+        width: 45px;
+    }
+
+    .current-episode-badge {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding: 35px 18px 20px;
+    }
+}
+```
